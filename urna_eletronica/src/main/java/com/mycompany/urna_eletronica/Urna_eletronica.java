@@ -13,8 +13,7 @@ public class Urna_eletronica {
 
 
     public void teste(JButton a,JTextField b,JTextField c){
-        String teste;
-        if(b.getText().equals("")){;
+        if(b.getText().equals("")){
             b.setText(a.getText()); 
         }else if(c.getText().equals("")){
             c.setText(a.getText()); 

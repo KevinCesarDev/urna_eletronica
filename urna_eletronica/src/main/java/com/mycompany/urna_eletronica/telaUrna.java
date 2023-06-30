@@ -189,7 +189,6 @@ public class telaUrna extends javax.swing.JFrame {
 
         bCorrigir.setBackground(new java.awt.Color(227, 123, 64));
         bCorrigir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        bCorrigir.setForeground(new java.awt.Color(0, 0, 0));
         bCorrigir.setText("CORRIGIR");
         bCorrigir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(153, 153, 153), new java.awt.Color(153, 153, 153)));
         bCorrigir.setBorderPainted(false);
@@ -202,7 +201,6 @@ public class telaUrna extends javax.swing.JFrame {
 
         bConfirmar.setBackground(new java.awt.Color(9, 227, 85));
         bConfirmar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        bConfirmar.setForeground(new java.awt.Color(0, 0, 0));
         bConfirmar.setText("CONFIRMAR");
         bConfirmar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(153, 153, 153), new java.awt.Color(153, 153, 153)));
         bConfirmar.setBorderPainted(false);
@@ -213,9 +211,7 @@ public class telaUrna extends javax.swing.JFrame {
             }
         });
 
-        bBranco.setBackground(new java.awt.Color(255, 255, 255));
         bBranco.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        bBranco.setForeground(new java.awt.Color(0, 0, 0));
         bBranco.setText("BRANCO");
         bBranco.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(153, 153, 153), new java.awt.Color(153, 153, 153)));
         bBranco.setBorderPainted(false);
