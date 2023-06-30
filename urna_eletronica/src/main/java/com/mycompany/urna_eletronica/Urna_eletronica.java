@@ -11,6 +11,6 @@ package com.mycompany.urna_eletronica;
 public class Urna_eletronica {
 
     public static void main(String[] args) {
-        System.out.println("Tiago da o anel <3");
+        System.out.println("Te");
     }
 }

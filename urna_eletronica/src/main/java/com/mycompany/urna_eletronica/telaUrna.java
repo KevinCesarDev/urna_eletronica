@@ -27,21 +27,274 @@ public class telaUrna extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        B1 = new javax.swing.JButton();
+        B2 = new javax.swing.JButton();
+        B3 = new javax.swing.JButton();
+        B4 = new javax.swing.JButton();
+        B5 = new javax.swing.JButton();
+        B6 = new javax.swing.JButton();
+        B7 = new javax.swing.JButton();
+        B8 = new javax.swing.JButton();
+        B9 = new javax.swing.JButton();
+        B10 = new javax.swing.JButton();
+        corrigir = new javax.swing.JButton();
+        confirmar = new javax.swing.JButton();
+        branco = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        B1.setBackground(new java.awt.Color(0, 0, 0));
+        B1.setForeground(new java.awt.Color(255, 255, 255));
+        B1.setText("1");
+        B1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        B1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B1ActionPerformed(evt);
+            }
+        });
+
+        B2.setBackground(new java.awt.Color(0, 0, 0));
+        B2.setForeground(new java.awt.Color(255, 255, 255));
+        B2.setText("2");
+        B2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        B2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B2ActionPerformed(evt);
+            }
+        });
+
+        B3.setBackground(new java.awt.Color(0, 0, 0));
+        B3.setForeground(new java.awt.Color(255, 255, 255));
+        B3.setText("3");
+        B3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        B3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B3ActionPerformed(evt);
+            }
+        });
+
+        B4.setBackground(new java.awt.Color(0, 0, 0));
+        B4.setForeground(new java.awt.Color(255, 255, 255));
+        B4.setText("4");
+        B4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        B4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B4ActionPerformed(evt);
+            }
+        });
+
+        B5.setBackground(new java.awt.Color(0, 0, 0));
+        B5.setForeground(new java.awt.Color(255, 255, 255));
+        B5.setText("5");
+        B5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        B5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B5ActionPerformed(evt);
+            }
+        });
+
+        B6.setBackground(new java.awt.Color(0, 0, 0));
+        B6.setForeground(new java.awt.Color(255, 255, 255));
+        B6.setText("6");
+        B6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        B6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B6ActionPerformed(evt);
+            }
+        });
+
+        B7.setBackground(new java.awt.Color(0, 0, 0));
+        B7.setForeground(new java.awt.Color(255, 255, 255));
+        B7.setText("7");
+        B7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        B7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B7ActionPerformed(evt);
+            }
+        });
+
+        B8.setBackground(new java.awt.Color(0, 0, 0));
+        B8.setForeground(new java.awt.Color(255, 255, 255));
+        B8.setText("8");
+        B8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        B8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B8ActionPerformed(evt);
+            }
+        });
+
+        B9.setBackground(new java.awt.Color(0, 0, 0));
+        B9.setForeground(new java.awt.Color(255, 255, 255));
+        B9.setText("9");
+        B9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        B9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B9ActionPerformed(evt);
+            }
+        });
+
+        B10.setBackground(new java.awt.Color(0, 0, 0));
+        B10.setForeground(new java.awt.Color(255, 255, 255));
+        B10.setText("0");
+        B10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        B10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B10ActionPerformed(evt);
+            }
+        });
+
+        corrigir.setBackground(new java.awt.Color(227, 123, 64));
+        corrigir.setForeground(new java.awt.Color(255, 255, 255));
+        corrigir.setText("CORRIGIR");
+        corrigir.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        corrigir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                corrigirActionPerformed(evt);
+            }
+        });
+
+        confirmar.setBackground(new java.awt.Color(9, 227, 85));
+        confirmar.setForeground(new java.awt.Color(255, 255, 255));
+        confirmar.setText("CONFIRMAR");
+        confirmar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        confirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmarActionPerformed(evt);
+            }
+        });
+
+        branco.setText("BRANCO");
+        branco.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        branco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                brancoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(348, 348, 348)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(branco)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(corrigir)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(confirmar))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(B10, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(68, 68, 68))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(B7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(16, 16, 16)
+                                    .addComponent(B8, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(16, 16, 16)
+                                    .addComponent(B9, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(B4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(16, 16, 16)
+                                        .addComponent(B5, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(16, 16, 16)
+                                        .addComponent(B6, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(B1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(16, 16, 16)
+                                        .addComponent(B2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(16, 16, 16)
+                                        .addComponent(B3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(48, 48, 48)))
+                .addGap(15, 15, 15))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(60, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(B1, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(B2, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(B3, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(B4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(B5, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(B6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(B7, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(B8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(B9, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addComponent(B10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(branco)
+                    .addComponent(corrigir)
+                    .addComponent(confirmar))
+                .addGap(31, 31, 31))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_B1ActionPerformed
+
+    private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_B2ActionPerformed
+
+    private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_B3ActionPerformed
+
+    private void B4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_B4ActionPerformed
+
+    private void B5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_B5ActionPerformed
+
+    private void B6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_B6ActionPerformed
+
+    private void B7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_B7ActionPerformed
+
+    private void B8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_B8ActionPerformed
+
+    private void B9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_B9ActionPerformed
+
+    private void B10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_B10ActionPerformed
+
+    private void brancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brancoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_brancoActionPerformed
+
+    private void corrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_corrigirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_corrigirActionPerformed
+
+    private void confirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_confirmarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +332,18 @@ public class telaUrna extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton B1;
+    private javax.swing.JButton B10;
+    private javax.swing.JButton B2;
+    private javax.swing.JButton B3;
+    private javax.swing.JButton B4;
+    private javax.swing.JButton B5;
+    private javax.swing.JButton B6;
+    private javax.swing.JButton B7;
+    private javax.swing.JButton B8;
+    private javax.swing.JButton B9;
+    private javax.swing.JButton branco;
+    private javax.swing.JButton confirmar;
+    private javax.swing.JButton corrigir;
     // End of variables declaration//GEN-END:variables
 }
