@@ -39,13 +39,13 @@ public class telaUrna extends javax.swing.JFrame {
         B8 = new javax.swing.JButton();
         B9 = new javax.swing.JButton();
         B10 = new javax.swing.JButton();
-        corrigir = new javax.swing.JButton();
-        confirmar = new javax.swing.JButton();
-        branco = new javax.swing.JButton();
+        bCorrigir = new javax.swing.JButton();
+        bConfirmar = new javax.swing.JButton();
+        bBranco = new javax.swing.JButton();
         num1 = new javax.swing.JTextField();
         num3 = new javax.swing.JTextField();
-        cargo = new javax.swing.JLabel();
-        seuVotoP = new javax.swing.JLabel();
+        labCargo = new javax.swing.JLabel();
+        labSeuVoto = new javax.swing.JLabel();
         numero = new javax.swing.JLabel();
         num2 = new javax.swing.JTextField();
         numero1 = new javax.swing.JLabel();
@@ -53,7 +53,7 @@ public class telaUrna extends javax.swing.JFrame {
         labNome = new javax.swing.JLabel();
         labPartido = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        instrucVoto = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -187,42 +187,42 @@ public class telaUrna extends javax.swing.JFrame {
             }
         });
 
-        corrigir.setBackground(new java.awt.Color(227, 123, 64));
-        corrigir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        corrigir.setForeground(new java.awt.Color(0, 0, 0));
-        corrigir.setText("CORRIGIR");
-        corrigir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(153, 153, 153), new java.awt.Color(153, 153, 153)));
-        corrigir.setBorderPainted(false);
-        corrigir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        corrigir.addActionListener(new java.awt.event.ActionListener() {
+        bCorrigir.setBackground(new java.awt.Color(227, 123, 64));
+        bCorrigir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        bCorrigir.setForeground(new java.awt.Color(0, 0, 0));
+        bCorrigir.setText("CORRIGIR");
+        bCorrigir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(153, 153, 153), new java.awt.Color(153, 153, 153)));
+        bCorrigir.setBorderPainted(false);
+        bCorrigir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        bCorrigir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                corrigirActionPerformed(evt);
+                bCorrigirActionPerformed(evt);
             }
         });
 
-        confirmar.setBackground(new java.awt.Color(9, 227, 85));
-        confirmar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        confirmar.setForeground(new java.awt.Color(0, 0, 0));
-        confirmar.setText("CONFIRMAR");
-        confirmar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(153, 153, 153), new java.awt.Color(153, 153, 153)));
-        confirmar.setBorderPainted(false);
-        confirmar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        confirmar.addActionListener(new java.awt.event.ActionListener() {
+        bConfirmar.setBackground(new java.awt.Color(9, 227, 85));
+        bConfirmar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        bConfirmar.setForeground(new java.awt.Color(0, 0, 0));
+        bConfirmar.setText("CONFIRMAR");
+        bConfirmar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(153, 153, 153), new java.awt.Color(153, 153, 153)));
+        bConfirmar.setBorderPainted(false);
+        bConfirmar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        bConfirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                confirmarActionPerformed(evt);
+                bConfirmarActionPerformed(evt);
             }
         });
 
-        branco.setBackground(new java.awt.Color(255, 255, 255));
-        branco.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        branco.setForeground(new java.awt.Color(0, 0, 0));
-        branco.setText("BRANCO");
-        branco.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(153, 153, 153), new java.awt.Color(153, 153, 153)));
-        branco.setBorderPainted(false);
-        branco.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        branco.addActionListener(new java.awt.event.ActionListener() {
+        bBranco.setBackground(new java.awt.Color(255, 255, 255));
+        bBranco.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        bBranco.setForeground(new java.awt.Color(0, 0, 0));
+        bBranco.setText("BRANCO");
+        bBranco.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(153, 153, 153), new java.awt.Color(153, 153, 153)));
+        bBranco.setBorderPainted(false);
+        bBranco.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        bBranco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                brancoActionPerformed(evt);
+                bBrancoActionPerformed(evt);
             }
         });
 
@@ -236,11 +236,11 @@ public class telaUrna extends javax.swing.JFrame {
             }
         });
 
-        cargo.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        cargo.setText("Cargo");
+        labCargo.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        labCargo.setText("Cargo");
 
-        seuVotoP.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        seuVotoP.setText("Seu voto para ");
+        labSeuVoto.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        labSeuVoto.setText("Seu voto para ");
 
         numero.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         numero.setText("Número:");
@@ -265,11 +265,11 @@ public class telaUrna extends javax.swing.JFrame {
         labPartido.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         labPartido.setText("labPartido");
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Aperte a Tecla: \n    CONFIRMAR para CONFIRMAR este voto\n    CORRIGE para REINICIAR este voto");
-        jScrollPane1.setViewportView(jTextArea1);
+        instrucVoto.setEditable(false);
+        instrucVoto.setColumns(20);
+        instrucVoto.setRows(5);
+        instrucVoto.setText("Aperte a Tecla: \n    CONFIRMAR para CONFIRMAR este voto\n    CORRIGE para REINICIAR este voto");
+        jScrollPane1.setViewportView(instrucVoto);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -278,11 +278,8 @@ public class telaUrna extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(129, 129, 129)
-                        .addComponent(cargo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(seuVotoP, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(labSeuVoto, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(13, 13, 13)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -298,7 +295,10 @@ public class telaUrna extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(num3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(num3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addComponent(labCargo)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 315, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -326,11 +326,11 @@ public class telaUrna extends javax.swing.JFrame {
                 .addGap(48, 48, 48))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(branco, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bBranco, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(corrigir, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bCorrigir, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(confirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29))
             .addGroup(layout.createSequentialGroup()
                 .addGap(13, 13, 13)
@@ -361,9 +361,9 @@ public class telaUrna extends javax.swing.JFrame {
                         .addComponent(B10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(seuVotoP, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labSeuVoto, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
-                        .addComponent(cargo, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labCargo, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(28, 28, 28)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -381,9 +381,9 @@ public class telaUrna extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(branco, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(corrigir, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(confirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(bBranco, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(bCorrigir, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(bConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -441,17 +441,17 @@ public class telaUrna extends javax.swing.JFrame {
         op.teste(B10, num1, num3);
     }//GEN-LAST:event_B10ActionPerformed
 
-    private void brancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brancoActionPerformed
+    private void bBrancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBrancoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_brancoActionPerformed
+    }//GEN-LAST:event_bBrancoActionPerformed
 
-    private void corrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_corrigirActionPerformed
+    private void bCorrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCorrigirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_corrigirActionPerformed
+    }//GEN-LAST:event_bCorrigirActionPerformed
 
-    private void confirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarActionPerformed
+    private void bConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bConfirmarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_confirmarActionPerformed
+    }//GEN-LAST:event_bConfirmarActionPerformed
 
     private void num3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num3ActionPerformed
         // TODO add your handling code here:
@@ -507,21 +507,21 @@ public class telaUrna extends javax.swing.JFrame {
     private javax.swing.JButton B7;
     private javax.swing.JButton B8;
     private javax.swing.JButton B9;
-    private javax.swing.JButton branco;
-    private javax.swing.JLabel cargo;
-    private javax.swing.JButton confirmar;
-    private javax.swing.JButton corrigir;
+    private javax.swing.JButton bBranco;
+    private javax.swing.JButton bConfirmar;
+    private javax.swing.JButton bCorrigir;
+    private javax.swing.JTextArea instrucVoto;
     private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel labCargo;
     private javax.swing.JLabel labNome;
     private javax.swing.JLabel labPartido;
+    private javax.swing.JLabel labSeuVoto;
     private javax.swing.JLabel nomeCanditato;
     private javax.swing.JTextField num1;
     private javax.swing.JTextField num2;
     private javax.swing.JTextField num3;
     private javax.swing.JLabel numero;
     private javax.swing.JLabel numero1;
-    private javax.swing.JLabel seuVotoP;
     // End of variables declaration//GEN-END:variables
 }
