@@ -4,14 +4,14 @@ package com.mycompany.urna_eletronica;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author Suricato Furtivo
  */
 public class telaUrna extends javax.swing.JFrame {
+
     Urna_eletronica app = new Urna_eletronica();
-    int contOrdem=0;
+    int contOrdem = 0;
 
     /**
      * Creates new form telaUrna
@@ -389,55 +389,54 @@ public class telaUrna extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
-        // TODO add your handling code here:
-        
+        // TODO add your handling code
         app.digNum(num1, num2, num3, B1, contOrdem);
 
     }//GEN-LAST:event_B1ActionPerformed
 
     private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_B2ActionPerformed
 
     private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
         // TODO add your handling code here:
-       
+
     }//GEN-LAST:event_B3ActionPerformed
 
     private void B4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B4ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_B4ActionPerformed
 
     private void B5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B5ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_B5ActionPerformed
 
     private void B6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B6ActionPerformed
         // TODO add your handling code here:
-     
+
     }//GEN-LAST:event_B6ActionPerformed
 
     private void B7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B7ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_B7ActionPerformed
 
     private void B8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B8ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_B8ActionPerformed
 
     private void B9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B9ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_B9ActionPerformed
 
     private void B10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B10ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_B10ActionPerformed
 
     private void bBrancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBrancoActionPerformed
@@ -450,9 +449,13 @@ public class telaUrna extends javax.swing.JFrame {
 
     private void bConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bConfirmarActionPerformed
         // TODO add your handling code here:
-        app.exibirCadidato(num1, num2, num3, contOrdem, labCargo);
+
+        //iniciando provisioramente pelo botao confimar
+        
+        app.exibirCadidato(num1, num2, num3, contOrdem, labCargo,labNome,labPartido);
         contOrdem++;
         app.quantNum(contOrdem, num3);
+        
         System.out.println(num1.getText() + " " + num2.getText() + " " + num3.getText());
     }//GEN-LAST:event_bConfirmarActionPerformed
 
