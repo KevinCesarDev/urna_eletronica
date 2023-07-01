@@ -452,9 +452,7 @@ public class telaUrna extends javax.swing.JFrame {
         // TODO add your handling code here:
         app.exibirCadidato(num1, num2, num3, contOrdem, labCargo);
         contOrdem++;
-        if(contOrdem > 1){
-            num3.setEnabled(false);
-        }
+        app.quantNum(contOrdem, num3);
         System.out.println(num1.getText() + " " + num2.getText() + " " + num3.getText());
     }//GEN-LAST:event_bConfirmarActionPerformed
 
