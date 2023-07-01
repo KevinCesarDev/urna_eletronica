@@ -12,11 +12,13 @@ import javax.swing.*;
 public class Urna_eletronica {
 
     String numCandidato = "";
-    Senador candidato = new Senador();
-    
-    
-    public void digNum(JTextField num1, JTextField num2, JTextField num3, JButton botao, int contOrdem) {
-        if (contOrdem == 1) {
+    Senador candidatoSen = new Senador();
+    Governador candidatoGov = new Governador();
+
+    public void digNum(JTextField num1, JTextField num2, JTextField num3, JButton botao, int contOrdem, JLabel labCargo) {
+        if (contOrdem == 0) {
+            labCargo.setText("Senador");
+            
             if (num1.getText().equals("")) {
                 num1.setText(botao.getText());
             } else if (num2.getText().equals("")) {
@@ -33,15 +35,22 @@ public class Urna_eletronica {
         }
     }
 
-    public void exibirCadidato(JTextField num1, JTextField num2, JTextField num3, int contOrdem, JLabel cargo, JLabel labNome, JLabel labPartido) {
+    public void exibirCadidato(JTextField num1, JTextField num2, JTextField num3, int contOrdem, JLabel labNome, JLabel labPartido) {
         if (contOrdem == 0) {
             numCandidato = (num1.getText()) + (num2.getText()) + (num3.getText());
-            cargo.setText("Senador");
-
+            
             switch (numCandidato) {
                 case "111":
-                    candidato.otto(labNome, labPartido);
+                    candidatoSen.otto(labNome, labPartido);
                     break;
+
+            }
+        }else if(contOrdem == 1){
+            numCandidato = (num1.getText()) + (num2.getText());
+            
+            switch(numCandidato){
+                case "13":
+                    candidatoGov.jeronimo(labNome, labPartido);
             }
         }
     }
@@ -50,5 +59,13 @@ public class Urna_eletronica {
         if (contOrdem > 1) {
             num.setEnabled(false);
         }
+    }
+    
+    public void limpar(JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido){
+       num1.setText("");
+       num2.setText("");
+       num3.setText("");
+       labNome.setText("");
+       labPartido.setText("");
     }
 }

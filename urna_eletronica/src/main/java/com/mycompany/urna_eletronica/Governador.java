@@ -4,10 +4,18 @@
  */
 package com.mycompany.urna_eletronica;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author kevin
  */
 public class Governador {
+    String nome;
+    String partido;
     
+    public void jeronimo(JLabel labNome, JLabel labPartido){
+        labNome.setText("Jerônimo");
+        labPartido.setText("PT");
+    }
 }

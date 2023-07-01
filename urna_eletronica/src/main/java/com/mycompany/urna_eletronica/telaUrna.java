@@ -390,7 +390,8 @@ public class telaUrna extends javax.swing.JFrame {
 
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
         // TODO add your handling code
-        app.digNum(num1, num2, num3, B1, contOrdem);
+        app.digNum(num1, num2, num3, B1, contOrdem,labCargo);
+        app.exibirCadidato(num1, num2, num3, contOrdem,labNome,labPartido);
 
     }//GEN-LAST:event_B1ActionPerformed
 
@@ -452,11 +453,11 @@ public class telaUrna extends javax.swing.JFrame {
 
         //iniciando provisioramente pelo botao confimar
         
-        app.exibirCadidato(num1, num2, num3, contOrdem, labCargo,labNome,labPartido);
         contOrdem++;
         app.quantNum(contOrdem, num3);
         
-        System.out.println(num1.getText() + " " + num2.getText() + " " + num3.getText());
+        //limpar
+        app.limpar(num1, num2, num3, labNome, labPartido);
     }//GEN-LAST:event_bConfirmarActionPerformed
 
     private void num3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num3ActionPerformed
