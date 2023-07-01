@@ -56,7 +56,7 @@ public class Urna_eletronica {
     }
 
     public void quantNum(int contOrdem, JTextField num) {
-        if (contOrdem > 1) {
+        if (contOrdem > 0) {
             num.setEnabled(false);
         }
     }
