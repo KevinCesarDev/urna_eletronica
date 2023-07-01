@@ -41,7 +41,7 @@ public class Urna_eletronica {
             
             switch (numCandidato) {
                 case "111":
-                    candidatoSen.otto(labNome, labPartido);
+                    candidatoSen.otto(labNome,labPartido);
                     break;
 
             }
