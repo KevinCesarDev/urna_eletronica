@@ -11,7 +11,7 @@ package com.mycompany.urna_eletronica;
  */
 public class telaUrna extends javax.swing.JFrame {
     Urna_eletronica app = new Urna_eletronica();
-    int contOrdem=1;
+    int contOrdem=0;
 
     /**
      * Creates new form telaUrna
@@ -390,6 +390,8 @@ public class telaUrna extends javax.swing.JFrame {
 
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
         // TODO add your handling code here:
+        
+        app.digNum(num1, num2, num3, B1, contOrdem);
 
     }//GEN-LAST:event_B1ActionPerformed
 
@@ -448,6 +450,12 @@ public class telaUrna extends javax.swing.JFrame {
 
     private void bConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bConfirmarActionPerformed
         // TODO add your handling code here:
+        app.exibirCadidato(num1, num2, num3, contOrdem, labCargo);
+        contOrdem++;
+        if(contOrdem > 1){
+            num3.setEnabled(false);
+        }
+        System.out.println(num1.getText() + " " + num2.getText() + " " + num3.getText());
     }//GEN-LAST:event_bConfirmarActionPerformed
 
     private void num3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num3ActionPerformed
