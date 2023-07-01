@@ -9,5 +9,13 @@ package com.mycompany.urna_eletronica;
  * @author kevin
  */
 public class Senador {
-    
+    String nome;
+    String partido;
+
+//    relatório
+//    int numero;
+
+    public void Senador() {
+        
+    }
 }

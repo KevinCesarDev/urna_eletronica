@@ -10,7 +10,8 @@ package com.mycompany.urna_eletronica;
  * @author Suricato Furtivo
  */
 public class telaUrna extends javax.swing.JFrame {
-    Urna_eletronica op = new Urna_eletronica();
+    Urna_eletronica app = new Urna_eletronica();
+    int contOrdem=1;
 
     /**
      * Creates new form telaUrna
@@ -295,7 +296,7 @@ public class telaUrna extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(129, 129, 129)
                         .addComponent(labCargo)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 315, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 323, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(B7, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -389,52 +390,52 @@ public class telaUrna extends javax.swing.JFrame {
 
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
         // TODO add your handling code here:
-        op.teste(B1, num1,num3);
+
     }//GEN-LAST:event_B1ActionPerformed
 
     private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
         // TODO add your handling code here:
-        op.teste(B2, num1, num3);
+        
     }//GEN-LAST:event_B2ActionPerformed
 
     private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
         // TODO add your handling code here:
-        op.teste(B3, num1, num3);
+       
     }//GEN-LAST:event_B3ActionPerformed
 
     private void B4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B4ActionPerformed
         // TODO add your handling code here:
-        op.teste(B4, num1, num3);
+        
     }//GEN-LAST:event_B4ActionPerformed
 
     private void B5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B5ActionPerformed
         // TODO add your handling code here:
-        op.teste(B5, num1, num3);
+        
     }//GEN-LAST:event_B5ActionPerformed
 
     private void B6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B6ActionPerformed
         // TODO add your handling code here:
-        op.teste(B6, num1, num3);
+     
     }//GEN-LAST:event_B6ActionPerformed
 
     private void B7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B7ActionPerformed
         // TODO add your handling code here:
-        op.teste(B7, num1, num3);
+        
     }//GEN-LAST:event_B7ActionPerformed
 
     private void B8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B8ActionPerformed
         // TODO add your handling code here:
-        op.teste(B8, num1, num3);
+        
     }//GEN-LAST:event_B8ActionPerformed
 
     private void B9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B9ActionPerformed
         // TODO add your handling code here:
-        op.teste(B9, num1, num3);
+        
     }//GEN-LAST:event_B9ActionPerformed
 
     private void B10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B10ActionPerformed
         // TODO add your handling code here:
-        op.teste(B10, num1, num3);
+        
     }//GEN-LAST:event_B10ActionPerformed
 
     private void bBrancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBrancoActionPerformed

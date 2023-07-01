@@ -10,13 +10,30 @@ import javax.swing.*;
  * @author kevin
  */
 public class Urna_eletronica {
-
-
-    public void teste(JButton a,JTextField b,JTextField c){
-        if(b.getText().equals("")){
-            b.setText(a.getText()); 
-        }else if(c.getText().equals("")){
-            c.setText(a.getText()); 
+    String numCandidato = "";
+    
+    public void digNum(JTextField num1,JTextField num2,JTextField num3,JButton botao,int contOrdem){
+        
+        if(num1.getText().equals("")){
+            num1.setText(botao.getText());
+        }else if(num2.getText().equals("")){
+            num2.setText(botao.getText());
+        }else if(num3.getText().equals("") && (contOrdem==1)){
+            num3.setText(botao.getText());
         }
-    } 
+    }
+   
+   public void exibirCadidato(JTextField num1,JTextField num2,JTextField num3,int contOrdem,JLabel cargo){
+       
+       
+       if(contOrdem==1){
+           numCandidato = (num1.getText())+(num2.getText())+(num3.getText());
+           cargo.setText("Senador");
+           
+           switch (numCandidato){
+               case "111":
+                   
+           }
+       }
+   }
 }
