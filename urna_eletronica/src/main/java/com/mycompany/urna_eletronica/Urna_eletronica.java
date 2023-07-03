@@ -15,12 +15,11 @@ public class Urna_eletronica {
     Senador candidatoSen = new Senador();
     Governador candidatoGov = new Governador();
     Presidente candidatoPres = new Presidente();
-    
 
     public void digNum(JTextField num1, JTextField num2, JTextField num3, JButton botao, int contOrdem, JLabel labCargo) {
         if (contOrdem == 0) {
             labCargo.setText("Senador");
-            
+
             if (num1.getText().equals("")) {
                 num1.setText(botao.getText());
             } else if (num2.getText().equals("")) {
@@ -40,33 +39,33 @@ public class Urna_eletronica {
     public void exibirCadidato(JTextField num1, JTextField num2, JTextField num3, int contOrdem, JLabel labNome, JLabel labPartido) {
         if (contOrdem == 0) {
             numCandidato = (num1.getText()) + (num2.getText()) + (num3.getText());
-            
+
             switch (numCandidato) {
                 case "111":
-                    candidatoSen.otto(labNome,labPartido);
+                    candidatoSen.otto(labNome, labPartido);
                     break;
 
             }
-        }else if(contOrdem == 1){
+        } else if (contOrdem == 1) {
             numCandidato = (num1.getText()) + (num2.getText());
-            
-            switch(numCandidato){
+
+            switch (numCandidato) {
                 case "13":
                     candidatoGov.jeronimo(labNome, labPartido);
                     break;
             }
-        }else if(contOrdem == 2){
+        } else if (contOrdem == 2) {
             numCandidato = (num1.getText()) + (num2.getText());
-            
-            switch (numCandidato){
+
+            switch (numCandidato) {
                 case "13":
-                    candidatoPres.lula(labNome,labPartido);
+                    candidatoPres.lula(labNome, labPartido);
                     break;
                 case "22":
                     candidatoPres.jair(labNome, labPartido);
                     break;
             }
-            
+
         }
     }
 
@@ -75,12 +74,30 @@ public class Urna_eletronica {
             num.setEnabled(false);
         }
     }
-    
-    public void limpar(JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido){
-       num1.setText("");
-       num2.setText("");
-       num3.setText("");
-       labNome.setText("");
-       labPartido.setText("");
+
+    public void limpar(JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido) {
+        num1.setText("");
+        num2.setText("");
+        num3.setText("");
+        labNome.setText("");
+        labPartido.setText("");
+    }
+
+    public void finalizar(JLabel labSeuVoto, JLabel labCargo, JLabel numero,JLabel nomeCanditato,JLabel partido,JTextArea instrucVoto, JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido) {
+        labSeuVoto.setVisible(false);
+        labCargo.setVisible(false);
+        numero.setVisible(false);
+        nomeCanditato.setVisible(false);
+        partido.setVisible(false);
+        instrucVoto.setVisible(false);
+        num1.setVisible(false);
+        num2.setVisible(false);
+        num3.setVisible(false);
+        
+        num1.setText("");
+        num2.setText("");
+        num3.setText("");
+        labNome.setText("");
+        labPartido.setText("");
     }
 }
