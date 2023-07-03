@@ -31,7 +31,7 @@ public class Fim extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(520, 340));
         setPreferredSize(new java.awt.Dimension(520, 340));
 
-        fim.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        fim.setFont(new java.awt.Font("Segoe UI", 0, 80)); // NOI18N
         fim.setText("FIM");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -39,16 +39,16 @@ public class Fim extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(226, 226, 226)
+                .addGap(194, 194, 194)
                 .addComponent(fim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(215, 215, 215))
+                .addGap(194, 194, 194))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(107, 107, 107)
+                .addGap(96, 96, 96)
                 .addComponent(fim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(169, 169, 169))
+                .addGap(136, 136, 136))
         );
     }// </editor-fold>//GEN-END:initComponents
 
