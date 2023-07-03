@@ -27,7 +27,15 @@ public class Urna_eletronica {
             } else if (num3.getText().equals("")) {
                 num3.setText(botao.getText());
             }
-        } else {
+        } else if (contOrdem == 1) {
+            labCargo.setText("Governador");
+            if (num1.getText().equals("")) {
+                num1.setText(botao.getText());
+            } else if (num2.getText().equals("")) {
+                num2.setText(botao.getText());
+            }
+        } else if (contOrdem == 2) {
+            labCargo.setText("Presidente");
             if (num1.getText().equals("")) {
                 num1.setText(botao.getText());
             } else if (num2.getText().equals("")) {
@@ -36,7 +44,7 @@ public class Urna_eletronica {
         }
     }
 
-    public void exibirCadidato(JTextField num1, JTextField num2, JTextField num3, int contOrdem, JLabel labNome, JLabel labPartido) {
+    public void exibirCadidato(JTextField num1, JTextField num2, JTextField num3, int contOrdem, JLabel labNome, JLabel nomeCandidato, JLabel labPartido, JLabel partido) {
         if (contOrdem == 0) {
             numCandidato = (num1.getText()) + (num2.getText()) + (num3.getText());
 
@@ -44,7 +52,13 @@ public class Urna_eletronica {
                 case "111":
                     candidatoSen.otto(labNome, labPartido);
                     break;
-
+                default:
+                    if (!(num3.getText().equals(""))) {
+                        nomeCandidato.setVisible(false);
+                        partido.setVisible(false);
+                        labNome.setText("");
+                        labPartido.setText("VOTO NULO");
+                    }
             }
         } else if (contOrdem == 1) {
             numCandidato = (num1.getText()) + (num2.getText());
@@ -53,6 +67,13 @@ public class Urna_eletronica {
                 case "13":
                     candidatoGov.jeronimo(labNome, labPartido);
                     break;
+                default:
+                    if (!(num2.getText().equals(""))) {
+                        nomeCandidato.setVisible(false);
+                        partido.setVisible(false);
+                        labNome.setText("");
+                        labPartido.setText("VOTO NULO");
+                    }
             }
         } else if (contOrdem == 2) {
             numCandidato = (num1.getText()) + (num2.getText());
@@ -64,6 +85,14 @@ public class Urna_eletronica {
                 case "22":
                     candidatoPres.jair(labNome, labPartido);
                     break;
+                default:
+                    if (!(num2.getText().equals(""))) {
+                        nomeCandidato.setVisible(false);
+                        partido.setVisible(false);
+
+                        labNome.setText("");
+                        labPartido.setText("VOTO NULO");
+                    }
             }
 
         }
@@ -75,15 +104,18 @@ public class Urna_eletronica {
         }
     }
 
-    public void limpar(JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido) {
+    public void limpar(JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel nomeCandidato, JLabel labPartido, JLabel partido) {
         num1.setText("");
         num2.setText("");
         num3.setText("");
         labNome.setText("");
         labPartido.setText("");
+
+        nomeCandidato.setVisible(true);
+        partido.setVisible(true);
     }
 
-    public void finalizar(JLabel labSeuVoto, JLabel labCargo, JLabel numero,JLabel nomeCanditato,JLabel partido,JTextArea instrucVoto, JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido) {
+    public void finalizar(JLabel labSeuVoto, JLabel labCargo, JLabel numero, JLabel nomeCanditato, JLabel partido, JTextArea instrucVoto, JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido) {
         labSeuVoto.setVisible(false);
         labCargo.setVisible(false);
         numero.setVisible(false);
@@ -93,7 +125,7 @@ public class Urna_eletronica {
         num1.setVisible(false);
         num2.setVisible(false);
         num3.setVisible(false);
-        
+
         num1.setText("");
         num2.setText("");
         num3.setText("");

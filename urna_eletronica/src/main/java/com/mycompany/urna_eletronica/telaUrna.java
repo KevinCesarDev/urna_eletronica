@@ -414,20 +414,20 @@ public class telaUrna extends javax.swing.JFrame {
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
         // TODO add your handling code
         app.digNum(num1, num2, num3, B1, contOrdem, labCargo);
-        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, labPartido);
+        app.exibirCadidato(num1, num2, num3, contOrdem, labNome,nomeCanditato, labPartido,partido);
 
     }//GEN-LAST:event_B1ActionPerformed
 
     private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
         // TODO add your handling code here:
         app.digNum(num1, num2, num3, B2, contOrdem, labCargo);
-        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, labPartido);
+        app.exibirCadidato(num1, num2, num3, contOrdem, labNome,nomeCanditato, labPartido,partido);
     }//GEN-LAST:event_B2ActionPerformed
 
     private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
         // TODO add your handling code here:
         app.digNum(num1, num2, num3, B3, contOrdem, labCargo);
-        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, labPartido);
+        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido);
     }//GEN-LAST:event_B3ActionPerformed
 
     private void B4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B4ActionPerformed
@@ -471,7 +471,7 @@ public class telaUrna extends javax.swing.JFrame {
 
     private void bCorrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCorrigirActionPerformed
         // TODO add your handling code here:
-        app.limpar(num1, num2, num3, labNome, labPartido);
+        app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido,partido);
     }//GEN-LAST:event_bCorrigirActionPerformed
 
     private void bConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bConfirmarActionPerformed
@@ -482,7 +482,7 @@ public class telaUrna extends javax.swing.JFrame {
         app.quantNum(contOrdem, num3);
 
         //limpar
-        app.limpar(num1, num2, num3, labNome, labPartido);
+        app.limpar(num1, num2, num3, labNome,nomeCanditato, labPartido,partido);
         
         //Fim dos votos
         if (contOrdem == 3) {
