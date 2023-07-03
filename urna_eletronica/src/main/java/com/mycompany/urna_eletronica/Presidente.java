@@ -4,10 +4,21 @@
  */
 package com.mycompany.urna_eletronica;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author kevin
  */
 public class Presidente {
-    
+
+    public void lula(JLabel labNome, JLabel labPartido) {
+        labNome.setText("Lula");
+        labPartido.setText("PT");
+    }
+
+    public void jair(JLabel labNome, JLabel labPartido) {
+        labNome.setText("Jair Bosonaro");
+        labPartido.setText("PL");
+    }
 }

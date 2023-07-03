@@ -14,6 +14,8 @@ public class Urna_eletronica {
     String numCandidato = "";
     Senador candidatoSen = new Senador();
     Governador candidatoGov = new Governador();
+    Presidente candidatoPres = new Presidente();
+    
 
     public void digNum(JTextField num1, JTextField num2, JTextField num3, JButton botao, int contOrdem, JLabel labCargo) {
         if (contOrdem == 0) {
@@ -51,7 +53,20 @@ public class Urna_eletronica {
             switch(numCandidato){
                 case "13":
                     candidatoGov.jeronimo(labNome, labPartido);
+                    break;
             }
+        }else if(contOrdem == 2){
+            numCandidato = (num1.getText()) + (num2.getText());
+            
+            switch (numCandidato){
+                case "13":
+                    candidatoPres.lula(labNome,labPartido);
+                    break;
+                case "22":
+                    candidatoPres.jair(labNome, labPartido);
+                    break;
+            }
+            
         }
     }
 
