@@ -10,7 +10,7 @@ import javax.swing.*;
  * @author kevin
  */
 public class Urna_eletronica {
-
+    
     String numCandidato = "";
     Senador candidatoSen = new Senador();
     Governador candidatoGov = new Governador();
@@ -115,7 +115,7 @@ public class Urna_eletronica {
         partido.setVisible(true);
     }
 
-    public void finalizar(JLabel labSeuVoto, JLabel labCargo, JLabel numero, JLabel nomeCanditato, JLabel partido, JTextArea instrucVoto, JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido) {
+    public void finalizar(JLabel labSeuVoto, JLabel labCargo, JLabel numero, JLabel nomeCanditato, JLabel partido, JTextArea instrucVoto, JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido, JTextField nomeEleitor, JLabel labEleitor) {
         labSeuVoto.setVisible(false);
         labCargo.setVisible(false);
         numero.setVisible(false);
@@ -125,11 +125,31 @@ public class Urna_eletronica {
         num1.setVisible(false);
         num2.setVisible(false);
         num3.setVisible(false);
+        labEleitor.setVisible(false);
+        nomeEleitor.setVisible(false);
 
         num1.setText("");
         num2.setText("");
         num3.setText("");
         labNome.setText("");
         labPartido.setText("");
+        nomeEleitor.setText("");
     }
+    
+        public void Iniciar(JLabel labSeuVoto, JLabel labCargo, JLabel numero, JLabel nomeCanditato, JLabel partido, JTextArea instrucVoto, JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido, JTextField nomeEleitor,JButton confirmar) {
+        labSeuVoto.setVisible(false);
+        labCargo.setVisible(false);
+        numero.setVisible(false);
+        nomeCanditato.setVisible(false);
+        partido.setVisible(false);
+        instrucVoto.setVisible(false);
+        num1.setVisible(false);
+        num2.setVisible(false);
+        num3.setVisible(false);
+        labNome.setVisible(false);
+        labPartido.setVisible(false);
+    }
+//        criar um metodo onde, na inicialização o eleitor irá escrever seu nome e apertará a de tecla confirmar para Transformar os elementos de setVisible(false) 
+//        para setVisible(true), além de quardar o nome que está no JTextField em uma variável ou até mesmo criar um classe Array que receberá essas informações. 
+//        Por ultimo, precisaremos realizar a desabilitação do JTextField  depois de apertar em confirmar, por meio de set.Enable(false).      
 }
