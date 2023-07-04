@@ -1,5 +1,9 @@
 package com.mycompany.urna_eletronica;
 
+import static java.lang.Thread.sleep;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -11,8 +15,8 @@ package com.mycompany.urna_eletronica;
 public class telaUrna extends javax.swing.JFrame {
 
     Urna_eletronica app = new Urna_eletronica();
+    Votos cadastro = new Votos();
     int contOrdem = 0;
-
     Fim fim = new Fim();
 
     /**
@@ -20,11 +24,12 @@ public class telaUrna extends javax.swing.JFrame {
      */
     public telaUrna() {
         initComponents();
-        app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, bConfirmar);
+        app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar);
 
         fim.setSize(520, 340);
         fim.setLocation(0, 0);
 
+        
     }
 
     /**
@@ -284,7 +289,6 @@ public class telaUrna extends javax.swing.JFrame {
         labEleitor.setText("Eleitor:");
 
         nomeEleitor.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        nomeEleitor.setText("labNomeEleitor");
 
         javax.swing.GroupLayout telaCandidatoLayout = new javax.swing.GroupLayout(telaCandidato);
         telaCandidato.setLayout(telaCandidatoLayout);
@@ -485,7 +489,7 @@ public class telaUrna extends javax.swing.JFrame {
 
     private void bCorrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCorrigirActionPerformed
         // TODO add your handling code here:
-        if (contOrdem < 3) {
+        if (contOrdem < 4) {
             app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido);
         }
     }//GEN-LAST:event_bCorrigirActionPerformed
@@ -494,18 +498,31 @@ public class telaUrna extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         //iniciando provisioramente pelo botao confimar
-        contOrdem++;
         app.quantNum(contOrdem, num3);
 
         //limpar
-        app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido);
-
+        if (contOrdem >= 1) {
+            app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido);
+        }
         //Fim dos votos
-        if (contOrdem == 3) {
-            app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor);
+        contOrdem++;
+        app.IniciarVotacao(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, bConfirmar, contOrdem);
+
+        if (contOrdem == 4) {
+            contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor);
             telaCandidato.add(fim);
             fim.setVisible(true);
+                        
+            
+            // o Sleep não está funcionando com o jpainel fim, o programa está rodando apenas uma única vez desta maneira 
+            
+            //fim.setVisible(false);
+            //app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar);
+
         }
+
+        //cadastrar Eleitor
+        cadastro.novoEleitor(nomeEleitor, contOrdem);
     }//GEN-LAST:event_bConfirmarActionPerformed
 
     private void num3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num3ActionPerformed

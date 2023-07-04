@@ -4,6 +4,9 @@
  */
 package com.mycompany.urna_eletronica;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author kevin
@@ -33,6 +36,7 @@ public class Fim extends javax.swing.JPanel {
 
         fim.setFont(new java.awt.Font("Segoe UI", 0, 80)); // NOI18N
         fim.setText("FIM");
+        fim.setDoubleBuffered(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
