@@ -184,9 +184,8 @@ public class Urna_eletronica {
             num3.setVisible(true);
             labNome.setVisible(true);
             labPartido.setVisible(true);
+            
+            nomeEleitor.setEnabled(false);
         }
     }
-//        criar um metodo onde, na inicialização o eleitor irá escrever seu nome e apertará a de tecla confirmar para Transformar os elementos de setVisible(false) 
-//        para setVisible(true), além de quardar o nome que está no JTextField em uma variável ou até mesmo criar um classe Array que receberá essas informações. 
-//        Por ultimo, precisaremos realizar a desabilitação do JTextField  depois de apertar em confirmar, por meio de set.Enable(false).      
 }

@@ -32,19 +32,26 @@ public class Votos {
 
     }
 
-    public void novoEleitor(JTextField nomeEleitor, int contOrdem) {
-        String nome="";
-        String votoSen="";
-        String votoGov="";
-        String votoPres="";
-        
-        if ((contOrdem == 1) && (!(nomeEleitor.getText().equals("")))) {
-            nome = nomeEleitor.getText();
-            nomeEleitor.setEnabled(false);
-        }else if(contOrdem == 2){
-            
-        }
+    public void NovoEleitor(String nome,String votoSen,String votoGov,String votoPres) {
         
         this.Eleitores.add(new Eleitor(nome, votoSen, votoGov, votoPres));
     }
+    
+    public void GuardarVoto(JTextField nomeEleitor, JLabel labCargo, JLabel labNome, String nome,String votoSen,String votoGov,String votoPres){
+        nome = nomeEleitor.getText();
+        
+        switch (labCargo.getText()) {
+            case "Senador":
+                votoSen = labNome.getText();
+                break;
+            case "Governador":
+                votoGov = labNome.getText();
+                break;
+            case "Presidente":
+                votoPres = labNome.getText();
+                break;
+            default:
+                break;
+        }
+    } 
 }

@@ -19,6 +19,11 @@ public class telaUrna extends javax.swing.JFrame {
     int contOrdem = 0;
     Fim fim = new Fim();
 
+    String nome="";
+    String votoSen="";
+    String votoGov="";
+    String votoPres="";
+
     /**
      * Creates new form telaUrna
      */
@@ -29,7 +34,6 @@ public class telaUrna extends javax.swing.JFrame {
         fim.setSize(520, 340);
         fim.setLocation(0, 0);
 
-        
     }
 
     /**
@@ -496,7 +500,7 @@ public class telaUrna extends javax.swing.JFrame {
 
     private void bConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bConfirmarActionPerformed
         // TODO add your handling code here:
-
+        cadastro.GuardarVoto(nomeEleitor, labCargo, labNome, nome, votoSen, votoGov, votoPres);
         //iniciando provisioramente pelo botao confimar
         app.quantNum(contOrdem, num3);
 
@@ -509,20 +513,20 @@ public class telaUrna extends javax.swing.JFrame {
         app.IniciarVotacao(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, bConfirmar, contOrdem);
 
         if (contOrdem == 4) {
+            cadastro.NovoEleitor(nome,votoSen,votoGov,votoPres);
             contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor);
             telaCandidato.add(fim);
             fim.setVisible(true);
-                        
-            
-            // o Sleep não está funcionando com o jpainel fim, o programa está rodando apenas uma única vez desta maneira 
-            
-            //fim.setVisible(false);
-            //app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar);
 
+            // o Sleep não está funcionando com o jpainel fim, o programa está rodando apenas uma única vez desta maneira 
+            //fim.setVisible(false);
+            
+            //só vai abrir para um novo eleitor com esta linha abaixo 
+            //app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar);
         }
 
         //cadastrar Eleitor
-        cadastro.novoEleitor(nomeEleitor, contOrdem);
+
     }//GEN-LAST:event_bConfirmarActionPerformed
 
     private void num3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num3ActionPerformed
