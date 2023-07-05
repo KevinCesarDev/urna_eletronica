@@ -20,7 +20,7 @@ public class Urna_eletronica {
 
     public void digNum(JTextField num1, JTextField num2, JTextField num3, JButton botao, int contOrdem, JLabel labCargo) {
         if (contOrdem == 1) {
-            labCargo.setText("Senador");
+            //labCargo.setText("Senador");
 
             if (num1.getText().equals("")) {
                 num1.setText(botao.getText());
@@ -30,19 +30,36 @@ public class Urna_eletronica {
                 num3.setText(botao.getText());
             }
         } else if (contOrdem == 2) {
-            labCargo.setText("Governador");
+            //labCargo.setText("Governador");
             if (num1.getText().equals("")) {
                 num1.setText(botao.getText());
             } else if (num2.getText().equals("")) {
                 num2.setText(botao.getText());
             }
         } else if (contOrdem == 3) {
-            labCargo.setText("Presidente");
+            //labCargo.setText("Presidente");
             if (num1.getText().equals("")) {
                 num1.setText(botao.getText());
             } else if (num2.getText().equals("")) {
                 num2.setText(botao.getText());
             }
+        }
+    }
+    
+        public void TelaCargo(JLabel labCargo, int contOrdem) {
+        switch (contOrdem) {
+            case 1:
+                labCargo.setText("Senador");
+                break;
+            case 2:
+                labCargo.setText("Governador");
+                break;
+            case 3:
+                labCargo.setText("Presidente");
+                break;
+            default:
+                labCargo.setText("");
+                break;
         }
     }
 

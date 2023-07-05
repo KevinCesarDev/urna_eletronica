@@ -30,7 +30,8 @@ public class telaUrna extends javax.swing.JFrame {
     public telaUrna() {
         initComponents();
         app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar);
-
+        
+        
         fim.setSize(520, 340);
         fim.setLocation(0, 0);
 
@@ -442,7 +443,7 @@ public class telaUrna extends javax.swing.JFrame {
 
     private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
         // TODO add your handling code here:
-        app.digNum(num1, num2, num3, B2, contOrdem, labCargo);
+       app.digNum(num1, num2, num3, B2, contOrdem, labCargo);
         app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido);
     }//GEN-LAST:event_B2ActionPerformed
 
@@ -508,22 +509,25 @@ public class telaUrna extends javax.swing.JFrame {
         if (contOrdem >= 1) {
             app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido);
         }
-        //Fim dos votos
+        //Fim dos votos3
         contOrdem++;
         app.IniciarVotacao(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, bConfirmar, contOrdem);
 
         if (contOrdem == 4) {
             cadastro.NovoEleitor(nome,votoSen,votoGov,votoPres);
             contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor);
-            telaCandidato.add(fim);
-            fim.setVisible(true);
+            //telaCandidato.add(fim);
+            //fim.setVisible(true);
 
             // o Sleep não está funcionando com o jpainel fim, o programa está rodando apenas uma única vez desta maneira 
             //fim.setVisible(false);
             
-            //só vai abrir para um novo eleitor com esta linha abaixo 
-            //app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar);
+            //só vai abrir para um novo eleitor com esta linha abaixo e tirar o fim(true) e add fim
+            app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar);
         }
+        
+        //exibir cargo do candidato
+        app.TelaCargo(labCargo, contOrdem);
 
         //cadastrar Eleitor
 
@@ -603,4 +607,5 @@ public class telaUrna extends javax.swing.JFrame {
     private javax.swing.JLabel partido;
     private javax.swing.JPanel telaCandidato;
     // End of variables declaration//GEN-END:variables
+    
 }
