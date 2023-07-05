@@ -29,7 +29,7 @@ public class telaUrna extends javax.swing.JFrame {
      */
     public telaUrna() {
         initComponents();
-        app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar);
+        app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar,fotoCand);
         
         
         fim.setSize(520, 340);
@@ -47,6 +47,7 @@ public class telaUrna extends javax.swing.JFrame {
     private void initComponents() {
 
         jOptionPane1 = new javax.swing.JOptionPane();
+        jLabel1 = new javax.swing.JLabel();
         B1 = new javax.swing.JButton();
         B2 = new javax.swing.JButton();
         B3 = new javax.swing.JButton();
@@ -75,6 +76,9 @@ public class telaUrna extends javax.swing.JFrame {
         partido = new javax.swing.JLabel();
         labEleitor = new javax.swing.JLabel();
         nomeEleitor = new javax.swing.JTextField();
+        fotoCand = new javax.swing.JLabel();
+
+        jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -295,6 +299,12 @@ public class telaUrna extends javax.swing.JFrame {
 
         nomeEleitor.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 
+        fotoCand.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fotoCand.setText("FOTO");
+        fotoCand.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fotoCand.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        fotoCand.setOpaque(true);
+
         javax.swing.GroupLayout telaCandidatoLayout = new javax.swing.GroupLayout(telaCandidato);
         telaCandidato.setLayout(telaCandidatoLayout);
         telaCandidatoLayout.setHorizontalGroup(
@@ -302,9 +312,6 @@ public class telaUrna extends javax.swing.JFrame {
             .addGroup(telaCandidatoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(labSeuVoto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(labCargo, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addGroup(telaCandidatoLayout.createSequentialGroup()
                         .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(numero, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -313,15 +320,24 @@ public class telaUrna extends javax.swing.JFrame {
                             .addComponent(labEleitor))
                         .addGap(7, 7, 7)
                         .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nomeEleitor, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
                             .addGroup(telaCandidatoLayout.createSequentialGroup()
-                                .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(num3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(labNome)
-                            .addComponent(labPartido)
-                            .addComponent(nomeEleitor, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE))))
+                                .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(telaCandidatoLayout.createSequentialGroup()
+                                        .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(num3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(labNome)
+                                    .addComponent(labPartido))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(fotoCand, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(telaCandidatoLayout.createSequentialGroup()
+                        .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labSeuVoto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labCargo, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         telaCandidatoLayout.setVerticalGroup(
@@ -329,23 +345,29 @@ public class telaUrna extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, telaCandidatoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labSeuVoto, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(labCargo, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(num3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(numero, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nomeCanditato, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labNome, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(partido, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(telaCandidatoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(labCargo, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(num3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(numero, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(nomeCanditato, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labNome, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(partido, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 36, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, telaCandidatoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                        .addComponent(fotoCand, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
                 .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labEleitor)
                     .addComponent(nomeEleitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -437,20 +459,20 @@ public class telaUrna extends javax.swing.JFrame {
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
         // TODO add your handling code
         app.digNum(num1, num2, num3, B1, contOrdem, labCargo);
-        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido);
+        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido,fotoCand);
 
     }//GEN-LAST:event_B1ActionPerformed
 
     private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
         // TODO add your handling code here:
        app.digNum(num1, num2, num3, B2, contOrdem, labCargo);
-        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido);
+        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido,fotoCand);
     }//GEN-LAST:event_B2ActionPerformed
 
     private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
         // TODO add your handling code here:
         app.digNum(num1, num2, num3, B3, contOrdem, labCargo);
-        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido);
+        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido,fotoCand);
     }//GEN-LAST:event_B3ActionPerformed
 
     private void B4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B4ActionPerformed
@@ -495,7 +517,7 @@ public class telaUrna extends javax.swing.JFrame {
     private void bCorrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCorrigirActionPerformed
         // TODO add your handling code here:
         if (contOrdem < 4) {
-            app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido);
+            app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido,fotoCand);
         }
     }//GEN-LAST:event_bCorrigirActionPerformed
 
@@ -507,7 +529,7 @@ public class telaUrna extends javax.swing.JFrame {
 
         //limpar
         if (contOrdem >= 1) {
-            app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido);
+            app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido,fotoCand);
         }
         //Fim dos votos3
         contOrdem++;
@@ -515,7 +537,7 @@ public class telaUrna extends javax.swing.JFrame {
 
         if (contOrdem == 4) {
             cadastro.NovoEleitor(nome,votoSen,votoGov,votoPres);
-            contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor);
+            contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor,fotoCand);
             //telaCandidato.add(fim);
             //fim.setVisible(true);
 
@@ -523,7 +545,7 @@ public class telaUrna extends javax.swing.JFrame {
             //fim.setVisible(false);
             
             //só vai abrir para um novo eleitor com esta linha abaixo e tirar o fim(true) e add fim
-            app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar);
+            app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar,fotoCand);
         }
         
         //exibir cargo do candidato
@@ -590,7 +612,9 @@ public class telaUrna extends javax.swing.JFrame {
     private javax.swing.JButton bBranco;
     private javax.swing.JButton bConfirmar;
     private javax.swing.JButton bCorrigir;
+    private javax.swing.JLabel fotoCand;
     private javax.swing.JTextArea instrucVoto;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel labCargo;
