@@ -519,10 +519,10 @@ public class telaUrna extends javax.swing.JFrame {
             fim.setVisible(true);
 
             // o Sleep não está funcionando com o jpainel fim, o programa está rodando apenas uma única vez desta maneira 
-            fim.setVisible(false);
+            //fim.setVisible(false);
             
             //só vai abrir para um novo eleitor com esta linha abaixo 
-            app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar);
+            //app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar);
         }
 
         //cadastrar Eleitor
