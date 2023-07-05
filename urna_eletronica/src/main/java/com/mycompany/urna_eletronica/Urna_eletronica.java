@@ -20,7 +20,7 @@ public class Urna_eletronica {
 
     public void digNum(JTextField num1, JTextField num2, JTextField num3, JButton botao, int contOrdem, JLabel labCargo) {
         if (contOrdem == 1) {
-            labCargo.setText("Senador");
+            //labCargo.setText("Senador");
 
             if (num1.getText().equals("")) {
                 num1.setText(botao.getText());
@@ -30,14 +30,14 @@ public class Urna_eletronica {
                 num3.setText(botao.getText());
             }
         } else if (contOrdem == 2) {
-            labCargo.setText("Governador");
+            //labCargo.setText("Governador");
             if (num1.getText().equals("")) {
                 num1.setText(botao.getText());
             } else if (num2.getText().equals("")) {
                 num2.setText(botao.getText());
             }
         } else if (contOrdem == 3) {
-            labCargo.setText("Presidente");
+            //labCargo.setText("Presidente");
             if (num1.getText().equals("")) {
                 num1.setText(botao.getText());
             } else if (num2.getText().equals("")) {
@@ -45,14 +45,34 @@ public class Urna_eletronica {
             }
         }
     }
+    
+        public void TelaCargo(JLabel labCargo, int contOrdem) {
+        switch (contOrdem) {
+            case 1:
+                labCargo.setText("Senador");
+                break;
+            case 2:
+                labCargo.setText("Governador");
+                break;
+            case 3:
+                labCargo.setText("Presidente");
+                break;
+            default:
+                labCargo.setText("");
+                break;
+        }
+    }
 
-    public void exibirCadidato(JTextField num1, JTextField num2, JTextField num3, int contOrdem, JLabel labNome, JLabel nomeCandidato, JLabel labPartido, JLabel partido) {
+    public void exibirCadidato(JTextField num1, JTextField num2, JTextField num3, int contOrdem, JLabel labNome, JLabel nomeCandidato, JLabel labPartido, JLabel partido,JLabel fotoCand) {
         if (contOrdem == 1) {
             numCandidato = (num1.getText()) + (num2.getText()) + (num3.getText());
 
             switch (numCandidato) {
                 case "111":
-                    candidatoSen.otto(labNome, labPartido);
+                    candidatoSen.caca(labNome, labPartido,fotoCand);
+                    break;
+                case"555":
+                    candidatoSen.otto(labNome, labPartido,fotoCand);
                     break;
                 default:
                     if (!(num3.getText().equals(""))) {
@@ -69,6 +89,9 @@ public class Urna_eletronica {
                 case "13":
                     candidatoGov.jeronimo(labNome, labPartido);
                     break;
+                case "44":
+                    candidatoGov.netinho(labNome, labPartido);
+                    break;
                 default:
                     if (!(num2.getText().equals(""))) {
                         nomeCandidato.setVisible(false);
@@ -81,6 +104,8 @@ public class Urna_eletronica {
             numCandidato = (num1.getText()) + (num2.getText());
 
             switch (numCandidato) {
+                case"12":
+                    candidatoPres.ciro(labNome, labPartido);
                 case "13":
                     candidatoPres.lula(labNome, labPartido);
                     break;
@@ -108,7 +133,10 @@ public class Urna_eletronica {
         }
     }
 
-    public void limpar(JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel nomeCandidato, JLabel labPartido, JLabel partido) {
+    public void limpar(JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel nomeCandidato, JLabel labPartido, JLabel partido,JLabel fotoCand) {
+        fotoCand.setVisible(false);
+        fotoCand.removeAll();
+        
         num1.setText("");
         num2.setText("");
         num3.setText("");
@@ -119,7 +147,7 @@ public class Urna_eletronica {
         partido.setVisible(true);
     }
 
-    public int finalizar(JLabel labSeuVoto, JLabel labCargo, JLabel numero, JLabel nomeCanditato, JLabel partido, JTextArea instrucVoto, JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido, JTextField nomeEleitor, JLabel labEleitor) {
+    public int finalizar(JLabel labSeuVoto, JLabel labCargo, JLabel numero, JLabel nomeCanditato, JLabel partido, JTextArea instrucVoto, JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido, JTextField nomeEleitor, JLabel labEleitor, JLabel fotoCand) {
         labSeuVoto.setVisible(false);
         labCargo.setVisible(false);
         numero.setVisible(false);
@@ -131,6 +159,7 @@ public class Urna_eletronica {
         num3.setVisible(false);
         labEleitor.setVisible(false);
         nomeEleitor.setVisible(false);
+        fotoCand.setVisible(false);
 
         num1.setText("");
         num2.setText("");
@@ -139,11 +168,12 @@ public class Urna_eletronica {
         labPartido.setText("");
         nomeEleitor.setText("");
         labCargo.setText("");
+        fotoCand.removeAll();
 
         return 0;
     }
 
-    public void Iniciar(JLabel labSeuVoto, JLabel labCargo, JLabel numero, JLabel nomeCanditato, JLabel partido, JTextArea instrucVoto, JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido, JTextField nomeEleitor, JLabel labEleitor, JButton confirmar) {
+    public void Iniciar(JLabel labSeuVoto, JLabel labCargo, JLabel numero, JLabel nomeCanditato, JLabel partido, JTextArea instrucVoto, JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido, JTextField nomeEleitor, JLabel labEleitor, JButton confirmar,JLabel fotoCand) {
 
         labSeuVoto.setVisible(false);
         labCargo.setVisible(false);
@@ -156,6 +186,7 @@ public class Urna_eletronica {
         num3.setVisible(false);
         labNome.setVisible(false);
         labPartido.setVisible(false);
+        fotoCand.setVisible(false);
 
         //começar um novo voto 
         nomeEleitor.setVisible(true);
@@ -168,7 +199,9 @@ public class Urna_eletronica {
         labNome.setText("");
         labPartido.setText("");
         labCargo.setText("");
-        nomeEleitor.setText("");
+        nomeEleitor.setText("");        
+        fotoCand.removeAll();
+        
     }
 
     public void IniciarVotacao(JLabel labSeuVoto, JLabel labCargo, JLabel numero, JLabel nomeCanditato, JLabel partido, JTextArea instrucVoto, JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido, JTextField nomeEleitor, JButton confirmar, int contOrdem) {

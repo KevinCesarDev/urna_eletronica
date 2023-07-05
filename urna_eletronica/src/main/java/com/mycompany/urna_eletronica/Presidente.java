@@ -21,4 +21,10 @@ public class Presidente {
         labNome.setText("Jair Bosonaro");
         labPartido.setText("PL");
     }
+
+    public void ciro(JLabel labNome, JLabel labPartido) {
+        labNome.setText("Ciro Gomes");
+        labPartido.setText("PDT");
+    }
+
 }

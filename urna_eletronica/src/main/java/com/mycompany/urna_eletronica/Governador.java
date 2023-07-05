@@ -11,11 +11,17 @@ import javax.swing.JLabel;
  * @author kevin
  */
 public class Governador {
+
     String nome;
     String partido;
-    
-    public void jeronimo(JLabel labNome, JLabel labPartido){
+
+    public void jeronimo(JLabel labNome, JLabel labPartido) {
         labNome.setText("Jerônimo");
         labPartido.setText("PT");
+    }
+
+    public void netinho(JLabel labNome, JLabel labPartido) {
+        labNome.setText("ACM Neto");
+        labPartido.setText("UNIÃO");
     }
 }
