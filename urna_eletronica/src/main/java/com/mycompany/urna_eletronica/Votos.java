@@ -5,6 +5,7 @@
 package com.mycompany.urna_eletronica;
 
 import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
@@ -14,44 +15,37 @@ import javax.swing.JTextField;
  */
 public class Votos {
 
-    ArrayList<Eleitor> Eleitores = new ArrayList();
-
-    public class Eleitor {
-
-        String nome;
-        String votoSen;
-        String votoGov;
-        String votoPres;
-
-        public Eleitor(String nome, String votoSen, String votoGov, String votoPres) {
-            this.nome = nome;
-            this.votoSen = votoSen;
-            this.votoGov = votoGov;
-            this.votoPres = votoPres;
-        }
-
-    }
-
-    public void NovoEleitor(String nome,String votoSen,String votoGov,String votoPres) {
-        
-        this.Eleitores.add(new Eleitor(nome, votoSen, votoGov, votoPres));
-    }
+     private List<Eleitor> eleitor;
     
-    public void GuardarVoto(JTextField nomeEleitor, JLabel labCargo, JLabel labNome, String nome,String votoSen,String votoGov,String votoPres){
-        nome = nomeEleitor.getText();
-        
-        switch (labCargo.getText()) {
-            case "Senador":
-                votoSen = labNome.getText();
-                break;
-            case "Governador":
-                votoGov = labNome.getText();
-                break;
-            case "Presidente":
-                votoPres = labNome.getText();
-                break;
-            default:
-                break;
-        }
-    } 
+//    public void GuardarVoto(JTextField nomeEleitor, JLabel labCargo, JLabel labNome, String nome,String votoSen,String votoGov,String votoPres){
+//        nome = nomeEleitor.getText();
+//        
+//        switch (labCargo.getText()) {
+//            case "Senador":
+//                votoSen = labNome.getText();
+//                break;
+//            case "Governador":
+//                votoGov = labNome.getText();
+//                break;
+//            case "Presidente":
+//                votoPres = labNome.getText();
+//                break;
+//            default:
+//                break;
+//        }
+//    } 
+
+    /**
+     * @return the eleitor
+     */
+    public List<Eleitor> getEleitor() {
+        return eleitor;
+    }
+
+    /**
+     * @param eleitor the eleitor to set
+     */
+    public void setEleitor(List<Eleitor> eleitor) {
+        this.eleitor = eleitor;
+    }
 }

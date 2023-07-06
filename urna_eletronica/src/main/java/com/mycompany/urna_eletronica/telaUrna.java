@@ -1,6 +1,7 @@
 package com.mycompany.urna_eletronica;
 
 import static java.lang.Thread.sleep;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,10 +16,11 @@ import java.util.logging.Logger;
 public class telaUrna extends javax.swing.JFrame {
 
     Urna_eletronica app = new Urna_eletronica();
-    Votos cadastro = new Votos();
     int contOrdem = 0;
     Fim fim = new Fim();
-
+    
+    
+    
     String nome="";
     String votoSen="";
     String votoGov="";
@@ -523,7 +525,7 @@ public class telaUrna extends javax.swing.JFrame {
 
     private void bConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bConfirmarActionPerformed
         // TODO add your handling code here:
-        cadastro.GuardarVoto(nomeEleitor, labCargo, labNome, nome, votoSen, votoGov, votoPres);
+        //cadastro.GuardarVoto(nomeEleitor, labCargo, labNome, nome, votoSen, votoGov, votoPres);
         //iniciando provisioramente pelo botao confimar
         app.quantNum(contOrdem, num3);
 
@@ -536,7 +538,7 @@ public class telaUrna extends javax.swing.JFrame {
         app.IniciarVotacao(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, bConfirmar, contOrdem);
 
         if (contOrdem == 4) {
-            cadastro.NovoEleitor(nome,votoSen,votoGov,votoPres);
+            //cadastro.NovoEleitor(nome,votoSen,votoGov,votoPres);
             contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor,fotoCand);
             //telaCandidato.add(fim);
             //fim.setVisible(true);
@@ -589,7 +591,18 @@ public class telaUrna extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(telaUrna.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        ArrayList<Eleitor> listaDeEleitores = new ArrayList<>();
+        Eleitor eleitor1 = new Eleitor("10","Kevin","-","-","-");
+        Eleitor eleitor2 = new Eleitor("15","Tiago","-","-","-");
+        
+        listaDeEleitores.add(eleitor1);
+        listaDeEleitores.add(eleitor2);
+        
+        Votos cadastro = new Votos();
+        cadastro.setEleitor(listaDeEleitores);
+        
+        System.out.println("Eleitor: "+cadastro.getEleitor().get(0).nome);
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
