@@ -169,7 +169,7 @@ public class Urna_eletronica {
         nomeEleitor.setText("");
         labCargo.setText("");
         fotoCand.removeAll();
-
+        
         return 0;
     }
 

@@ -18,14 +18,12 @@ import javax.swing.JTextField;
 public class Votos {
 
     private List<Eleitor> eleitor;
-    boolean validado = false;
-    
-    public boolean ValidarEleitor(String eleitor, JTextField nomeEleitor) {
+    boolean validado=false;
 
-        
-        
-            if ((nomeEleitor.getText()).equals(eleitor)) {
-                validado = true;
+    public boolean ValidarEleitor(String eleitor, JTextField nomeEleitor) {
+        //System.out.println("Dentro - "+validado);
+        if ((nomeEleitor.getText()).equals(eleitor)) {
+            validado = true;
         }
         return validado;
     }

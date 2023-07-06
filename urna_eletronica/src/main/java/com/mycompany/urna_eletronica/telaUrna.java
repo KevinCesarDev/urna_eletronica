@@ -24,7 +24,7 @@ public class telaUrna extends javax.swing.JFrame {
     String votoSen = "";
     String votoGov = "";
     String votoPres = "";
-    boolean validado = false;
+    boolean validado;
 
     //como acessar os elementos de uma classe em uma lista
     //(cadastro.getEleitor().get(0).nome)
@@ -36,16 +36,23 @@ public class telaUrna extends javax.swing.JFrame {
 
         app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar, fotoCand);
 
+        //devido ao nosso projeto não está vinculado ao banco de dados, é necessário atritbuir os eleitores sempre que a urna iniciar
         ArrayList<Eleitor> listaDeEleitores = new ArrayList<>();
         Eleitor eleitor1 = new Eleitor("10", "Kevin", "-", "-", "-");
         Eleitor eleitor2 = new Eleitor("15", "Tiago", "-", "-", "-");
+        Eleitor eleitor3 = new Eleitor("20", "Raphael", "-", "-", "-");
+        Eleitor eleitor4 = new Eleitor("25", "Berenguer", "-", "-", "-");
+        Eleitor eleitor5 = new Eleitor("30", "Wyll", "-", "-", "-");
+        Eleitor eleitor6 = new Eleitor("35", "Icaro", "-", "-", "-");
 
         listaDeEleitores.add(eleitor1);
         listaDeEleitores.add(eleitor2);
+        listaDeEleitores.add(eleitor3);
+        listaDeEleitores.add(eleitor4);
+        listaDeEleitores.add(eleitor5);
+        listaDeEleitores.add(eleitor6);
 
         cadastro.setEleitor(listaDeEleitores);
-
-        //System.out.println(cadastro.getEleitor().size());
         fim.setSize(520, 340);
         fim.setLocation(0, 0);
 
@@ -309,7 +316,7 @@ public class telaUrna extends javax.swing.JFrame {
         partido.setText("Partido: ");
 
         labEleitor.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        labEleitor.setText("Eleitor:");
+        labEleitor.setText("Nº Título de Eleitor:");
 
         nomeEleitor.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 
@@ -328,24 +335,28 @@ public class telaUrna extends javax.swing.JFrame {
                 .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(telaCandidatoLayout.createSequentialGroup()
                         .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(numero, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nomeCanditato, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(partido)
-                            .addComponent(labEleitor))
-                        .addGap(7, 7, 7)
-                        .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomeEleitor, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
+                            .addComponent(labEleitor)
+                            .addGroup(telaCandidatoLayout.createSequentialGroup()
+                                .addComponent(numero, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(num3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(telaCandidatoLayout.createSequentialGroup()
                                 .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(telaCandidatoLayout.createSequentialGroup()
-                                        .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(labNome)
-                                    .addComponent(labPartido))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(nomeCanditato, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(partido))
+                                .addGap(18, 18, 18)
+                                .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labPartido)
+                                    .addComponent(labNome))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nomeEleitor)
+                            .addGroup(telaCandidatoLayout.createSequentialGroup()
+                                .addGap(0, 96, Short.MAX_VALUE)
                                 .addComponent(fotoCand, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(telaCandidatoLayout.createSequentialGroup()
                         .addGroup(telaCandidatoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -538,25 +549,29 @@ public class telaUrna extends javax.swing.JFrame {
     private void bConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bConfirmarActionPerformed
         // TODO add your handling code here:
         //validação do eleitor no cadastro
-        for (int i = 0; i < cadastro.getEleitor().size(); i++) {
-            validado = cadastro.ValidarEleitor(cadastro.getEleitor().get(i).titulo, nomeEleitor);
+        if (contOrdem == 0) {
+            for (int i = 0; i < cadastro.getEleitor().size(); i++) {
+                validado=cadastro.ValidarEleitor(cadastro.getEleitor().get(i).titulo, nomeEleitor);
+            }
         }
-        
+
         if (validado == true) {
-            System.out.println("Eleitor  validado");
-            
+            System.out.println("ELEITOR VALIDADO");
+
             app.quantNum(contOrdem, num3);
 
             //limpar
             if (contOrdem >= 1) {
                 app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido, fotoCand);
             }
-            //Fim dos votos3
+            //Fim dos votos
             contOrdem++;
             app.IniciarVotacao(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, bConfirmar, contOrdem);
 
             if (contOrdem == 4) {
                 contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, fotoCand);
+                cadastro.validado = false;
+                
                 //telaCandidato.add(fim);
                 //fim.setVisible(true);
 

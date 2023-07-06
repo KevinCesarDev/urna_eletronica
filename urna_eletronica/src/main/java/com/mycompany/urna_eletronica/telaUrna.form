@@ -500,27 +500,33 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="numero" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                              <Component id="nomeCanditato" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
-                              <Component id="partido" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="labEleitor" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="nomeEleitor" alignment="0" pref="403" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="numero" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="num1" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="num2" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="num3" min="-2" pref="40" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="num1" min="-2" pref="40" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="num2" min="-2" pref="40" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="num3" min="-2" pref="40" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="labNome" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="labPartido" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="nomeCanditato" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                      <Component id="partido" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="labPartido" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labNome" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="nomeEleitor" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="0" pref="96" max="32767" attributes="0"/>
                                   <Component id="fotoCand" min="-2" pref="170" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -669,7 +675,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="24" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Eleitor:"/>
+            <Property name="text" type="java.lang.String" value="N&#xba; T&#xed;tulo de Eleitor:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="nomeEleitor">
