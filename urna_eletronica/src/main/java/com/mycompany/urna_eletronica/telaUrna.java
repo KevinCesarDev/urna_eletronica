@@ -15,25 +15,37 @@ import java.util.logging.Logger;
  */
 public class telaUrna extends javax.swing.JFrame {
 
+    Votos cadastro = new Votos();
     Urna_eletronica app = new Urna_eletronica();
     int contOrdem = 0;
     Fim fim = new Fim();
-    
-    
-    
-    String nome="";
-    String votoSen="";
-    String votoGov="";
-    String votoPres="";
 
+    String nome = "";
+    String votoSen = "";
+    String votoGov = "";
+    String votoPres = "";
+    boolean validado = false;
+
+    //como acessar os elementos de uma classe em uma lista
+    //(cadastro.getEleitor().get(0).nome)
     /**
      * Creates new form telaUrna
      */
     public telaUrna() {
         initComponents();
-        app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar,fotoCand);
-        
-        
+
+        app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar, fotoCand);
+
+        ArrayList<Eleitor> listaDeEleitores = new ArrayList<>();
+        Eleitor eleitor1 = new Eleitor("10", "Kevin", "-", "-", "-");
+        Eleitor eleitor2 = new Eleitor("15", "Tiago", "-", "-", "-");
+
+        listaDeEleitores.add(eleitor1);
+        listaDeEleitores.add(eleitor2);
+
+        cadastro.setEleitor(listaDeEleitores);
+
+        //System.out.println(cadastro.getEleitor().size());
         fim.setSize(520, 340);
         fim.setLocation(0, 0);
 
@@ -461,20 +473,20 @@ public class telaUrna extends javax.swing.JFrame {
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
         // TODO add your handling code
         app.digNum(num1, num2, num3, B1, contOrdem, labCargo);
-        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido,fotoCand);
+        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand);
 
     }//GEN-LAST:event_B1ActionPerformed
 
     private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
         // TODO add your handling code here:
-       app.digNum(num1, num2, num3, B2, contOrdem, labCargo);
-        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido,fotoCand);
+        app.digNum(num1, num2, num3, B2, contOrdem, labCargo);
+        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand);
     }//GEN-LAST:event_B2ActionPerformed
 
     private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
         // TODO add your handling code here:
         app.digNum(num1, num2, num3, B3, contOrdem, labCargo);
-        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido,fotoCand);
+        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand);
     }//GEN-LAST:event_B3ActionPerformed
 
     private void B4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B4ActionPerformed
@@ -519,39 +531,48 @@ public class telaUrna extends javax.swing.JFrame {
     private void bCorrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCorrigirActionPerformed
         // TODO add your handling code here:
         if (contOrdem < 4) {
-            app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido,fotoCand);
+            app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido, fotoCand);
         }
     }//GEN-LAST:event_bCorrigirActionPerformed
 
     private void bConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bConfirmarActionPerformed
         // TODO add your handling code here:
-        //cadastro.GuardarVoto(nomeEleitor, labCargo, labNome, nome, votoSen, votoGov, votoPres);
-        //iniciando provisioramente pelo botao confimar
-        app.quantNum(contOrdem, num3);
-
-        //limpar
-        if (contOrdem >= 1) {
-            app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido,fotoCand);
-        }
-        //Fim dos votos3
-        contOrdem++;
-        app.IniciarVotacao(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, bConfirmar, contOrdem);
-
-        if (contOrdem == 4) {
-            //cadastro.NovoEleitor(nome,votoSen,votoGov,votoPres);
-            contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor,fotoCand);
-            //telaCandidato.add(fim);
-            //fim.setVisible(true);
-
-            // o Sleep não está funcionando com o jpainel fim, o programa está rodando apenas uma única vez desta maneira 
-            //fim.setVisible(false);
-            
-            //só vai abrir para um novo eleitor com esta linha abaixo e tirar o fim(true) e add fim
-            app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar,fotoCand);
+        //validação do eleitor no cadastro
+        for (int i = 0; i < cadastro.getEleitor().size(); i++) {
+            validado = cadastro.ValidarEleitor(cadastro.getEleitor().get(i).titulo, nomeEleitor);
         }
         
-        //exibir cargo do candidato
-        app.TelaCargo(labCargo, contOrdem);
+        if (validado == true) {
+            System.out.println("Eleitor  validado");
+            
+            app.quantNum(contOrdem, num3);
+
+            //limpar
+            if (contOrdem >= 1) {
+                app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido, fotoCand);
+            }
+            //Fim dos votos3
+            contOrdem++;
+            app.IniciarVotacao(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, bConfirmar, contOrdem);
+
+            if (contOrdem == 4) {
+                contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, fotoCand);
+                //telaCandidato.add(fim);
+                //fim.setVisible(true);
+
+                // o Sleep não está funcionando com o jpainel fim, o programa está rodando apenas uma única vez desta maneira 
+                //fim.setVisible(false);
+                //só vai abrir para um novo eleitor com esta linha abaixo e tirar o fim(true) e add fim
+                app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar, fotoCand);
+            }
+
+            //exibir cargo do candidato
+            app.TelaCargo(labCargo, contOrdem);
+        } else {
+
+            System.out.println("NÃO VALIDADO");
+        }
+        //
 
         //cadastrar Eleitor
 
@@ -591,18 +612,8 @@ public class telaUrna extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(telaUrna.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        ArrayList<Eleitor> listaDeEleitores = new ArrayList<>();
-        Eleitor eleitor1 = new Eleitor("10","Kevin","-","-","-");
-        Eleitor eleitor2 = new Eleitor("15","Tiago","-","-","-");
-        
-        listaDeEleitores.add(eleitor1);
-        listaDeEleitores.add(eleitor2);
-        
-        Votos cadastro = new Votos();
-        cadastro.setEleitor(listaDeEleitores);
-        
-        System.out.println("Eleitor: "+cadastro.getEleitor().get(0).nome);
-        
+
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -644,5 +655,5 @@ public class telaUrna extends javax.swing.JFrame {
     private javax.swing.JLabel partido;
     private javax.swing.JPanel telaCandidato;
     // End of variables declaration//GEN-END:variables
-    
+
 }

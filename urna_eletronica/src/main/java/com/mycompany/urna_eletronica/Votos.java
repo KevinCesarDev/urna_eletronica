@@ -4,8 +4,10 @@
  */
 package com.mycompany.urna_eletronica;
 
+import java.awt.ActiveEvent;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
@@ -15,25 +17,18 @@ import javax.swing.JTextField;
  */
 public class Votos {
 
-     private List<Eleitor> eleitor;
+    private List<Eleitor> eleitor;
+    boolean validado = false;
     
-//    public void GuardarVoto(JTextField nomeEleitor, JLabel labCargo, JLabel labNome, String nome,String votoSen,String votoGov,String votoPres){
-//        nome = nomeEleitor.getText();
-//        
-//        switch (labCargo.getText()) {
-//            case "Senador":
-//                votoSen = labNome.getText();
-//                break;
-//            case "Governador":
-//                votoGov = labNome.getText();
-//                break;
-//            case "Presidente":
-//                votoPres = labNome.getText();
-//                break;
-//            default:
-//                break;
-//        }
-//    } 
+    public boolean ValidarEleitor(String eleitor, JTextField nomeEleitor) {
+
+        
+        
+            if ((nomeEleitor.getText()).equals(eleitor)) {
+                validado = true;
+        }
+        return validado;
+    }
 
     /**
      * @return the eleitor
