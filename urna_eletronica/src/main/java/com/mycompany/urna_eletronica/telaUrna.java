@@ -1,9 +1,11 @@
 package com.mycompany.urna_eletronica;
 
+import java.awt.Image;
 import static java.lang.Thread.sleep;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -14,6 +16,8 @@ import java.util.logging.Logger;
  * @author Suricato Furtivo
  */
 public class telaUrna extends javax.swing.JFrame {
+    
+    
 
     Votos cadastro = new Votos();
     Urna_eletronica app = new Urna_eletronica();
@@ -321,7 +325,6 @@ public class telaUrna extends javax.swing.JFrame {
         nomeEleitor.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 
         fotoCand.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        fotoCand.setText("FOTO");
         fotoCand.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         fotoCand.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         fotoCand.setOpaque(true);
@@ -601,6 +604,8 @@ public class telaUrna extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_num2ActionPerformed
 
+    
+    
     /**
      * @param args the command line arguments
      */

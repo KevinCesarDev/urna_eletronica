@@ -12,19 +12,22 @@ import javax.swing.JLabel;
  */
 public class Presidente {
 
-    public void lula(JLabel labNome, JLabel labPartido) {
+    public void lula(JLabel labNome, JLabel labPartido,JLabel fotoCand) {
         labNome.setText("Lula");
         labPartido.setText("PT");
+        fotoCand.setVisible(true);
     }
 
-    public void jair(JLabel labNome, JLabel labPartido) {
+    public void jair(JLabel labNome, JLabel labPartido,JLabel fotoCand) {
         labNome.setText("Jair Bosonaro");
         labPartido.setText("PL");
+        fotoCand.setVisible(true);
     }
 
-    public void ciro(JLabel labNome, JLabel labPartido) {
+    public void ciro(JLabel labNome, JLabel labPartido,JLabel fotoCand) {
         labNome.setText("Ciro Gomes");
         labPartido.setText("PDT");
+        fotoCand.setVisible(true);
     }
 
 }

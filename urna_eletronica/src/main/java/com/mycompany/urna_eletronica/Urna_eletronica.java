@@ -3,6 +3,7 @@
  */
 package com.mycompany.urna_eletronica;
 
+import java.awt.Image;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
@@ -71,7 +72,7 @@ public class Urna_eletronica {
                 case "111":
                     candidatoSen.caca(labNome, labPartido,fotoCand);
                     break;
-                case"555":
+                case"333":
                     candidatoSen.otto(labNome, labPartido,fotoCand);
                     break;
                 default:
@@ -87,10 +88,10 @@ public class Urna_eletronica {
 
             switch (numCandidato) {
                 case "13":
-                    candidatoGov.jeronimo(labNome, labPartido);
+                    candidatoGov.jeronimo(labNome, labPartido,fotoCand);
                     break;
                 case "44":
-                    candidatoGov.netinho(labNome, labPartido);
+                    candidatoGov.netinho(labNome, labPartido,fotoCand);
                     break;
                 default:
                     if (!(num2.getText().equals(""))) {
@@ -104,13 +105,14 @@ public class Urna_eletronica {
             numCandidato = (num1.getText()) + (num2.getText());
 
             switch (numCandidato) {
-                case"12":
-                    candidatoPres.ciro(labNome, labPartido);
+                case "12":
+                    candidatoPres.ciro(labNome, labPartido,fotoCand);
+                    break;
                 case "13":
-                    candidatoPres.lula(labNome, labPartido);
+                    candidatoPres.lula(labNome, labPartido,fotoCand);
                     break;
                 case "22":
-                    candidatoPres.jair(labNome, labPartido);
+                    candidatoPres.jair(labNome, labPartido,fotoCand);
                     break;
                 default:
                     if (!(num2.getText().equals(""))) {
@@ -123,6 +125,8 @@ public class Urna_eletronica {
             }
 
         }
+        ImageIcon foto = new ImageIcon(new ImageIcon("C:/Users/Suricato Furtivo/Documents/urna_eletronica/urna_eletronica/src/main/java/imagens/" + labNome.getText() + ".jpg").getImage().getScaledInstance(200,220,Image.SCALE_DEFAULT));
+        fotoCand.setIcon(foto);
     }
 
     public void quantNum(int contOrdem, JTextField num) {

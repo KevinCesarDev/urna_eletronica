@@ -15,13 +15,15 @@ public class Governador {
     String nome;
     String partido;
 
-    public void jeronimo(JLabel labNome, JLabel labPartido) {
+    public void jeronimo(JLabel labNome, JLabel labPartido,JLabel fotoCand) {
         labNome.setText("Jerônimo");
         labPartido.setText("PT");
+        fotoCand.setVisible(true);
     }
 
-    public void netinho(JLabel labNome, JLabel labPartido) {
+    public void netinho(JLabel labNome, JLabel labPartido,JLabel fotoCand) {
         labNome.setText("ACM Neto");
         labPartido.setText("UNIÃO");
+        fotoCand.setVisible(true);
     }
 }

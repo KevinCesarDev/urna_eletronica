@@ -4,6 +4,7 @@
  */
 package com.mycompany.urna_eletronica;
 
+import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
@@ -16,13 +17,15 @@ public class Senador{
         labNome.setText("Cacá Leão");  
         labPartido.setText("PP"); 
         fotoCand.setVisible(true);
-        ImageIcon foto = new ImageIcon("src/imagens/senador111.jpg");
+        
+        //ImageIcon foto = new ImageIcon("src/imagens/senador111.jpg");
         //linha abaixo redimenciona a imagem
         //foto.setImage(foto.getImage().getScaledInstance(fotoCand.getWidth(), fotoCand.getHeight(), 1));
-        fotoCand.setIcon(foto);
+        //fotoCand.setIcon(foto);
     }
         public void otto(JLabel labNome, JLabel labPartido,JLabel fotoCand) {
         labNome.setText("Otto Alencar");  
-        labPartido.setText("PDS"); 
+        labPartido.setText("PDS");
+        fotoCand.setVisible(true);
     }
 }
