@@ -2,6 +2,7 @@ package com.mycompany.urna_eletronica;
 
 import java.awt.Image;
 import static java.lang.Thread.sleep;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -572,14 +573,23 @@ public class telaUrna extends javax.swing.JFrame {
             app.IniciarVotacao(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, bConfirmar, contOrdem);
 
             if (contOrdem == 4) {
+              
                 contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, fotoCand);
                 cadastro.validado = false;
                 
-                //telaCandidato.add(fim);
-                //fim.setVisible(true);
-
-                // o Sleep não está funcionando com o jpainel fim, o programa está rodando apenas uma única vez desta maneira 
-                //fim.setVisible(false);
+               
+                    
+                try {
+                    //telaCandidato.add(fim);
+                    
+                    // o Sleep não está funcionando com o jpainel fim, o programa está rodando apenas uma única vez desta maneira
+                    Thread.sleep(3000);
+                    fim.setVisible(true);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(telaUrna.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
+                fim.setVisible(false);
                 //só vai abrir para um novo eleitor com esta linha abaixo e tirar o fim(true) e add fim
                 app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar, fotoCand);
             }
