@@ -79,8 +79,8 @@ public class Urna_eletronica {
                     if (!(num3.getText().equals(""))) {
                         nomeCandidato.setVisible(false);
                         partido.setVisible(false);
-                        labNome.setText("");
-                        labPartido.setText("VOTO NULO");
+                        labNome.setText("VOTO NULO");
+                        labPartido.setText("");
                     }
             }
         } else if (contOrdem == 2) {
@@ -97,8 +97,8 @@ public class Urna_eletronica {
                     if (!(num2.getText().equals(""))) {
                         nomeCandidato.setVisible(false);
                         partido.setVisible(false);
-                        labNome.setText("");
-                        labPartido.setText("VOTO NULO");
+                        labNome.setText("VOTO NULO");
+                        labPartido.setText("");
                     }
             }
         } else if (contOrdem == 3) {
@@ -119,8 +119,8 @@ public class Urna_eletronica {
                         nomeCandidato.setVisible(false);
                         partido.setVisible(false);
 
-                        labNome.setText("");
-                        labPartido.setText("VOTO NULO");
+                        labNome.setText("VOTO NULO");
+                        labPartido.setText("");
                     }
             }
 
