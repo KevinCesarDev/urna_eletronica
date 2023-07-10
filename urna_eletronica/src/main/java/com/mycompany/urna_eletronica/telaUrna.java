@@ -566,7 +566,7 @@ public class telaUrna extends javax.swing.JFrame {
             //Salvar e Limpar
             if (contOrdem >= 1) {
                 //salva votos
-                app.GuardarCandidato(contOrdem, labNome, this.votoSen, this.votoGov, this.votoPres);
+                app.GuardarCandidato(contOrdem, labNome, votoSen, votoGov, votoPres);
                 //limpar votos
                 app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido, fotoCand);
             }
@@ -575,6 +575,7 @@ public class telaUrna extends javax.swing.JFrame {
             app.IniciarVotacao(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, bConfirmar, contOrdem);
 
             if (contOrdem == 4) {
+                //teste
                 System.out.println(votoSen+"\n"+votoGov+"\n"+votoPres);
                 
                 contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, fotoCand);
