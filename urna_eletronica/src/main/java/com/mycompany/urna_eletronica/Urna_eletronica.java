@@ -225,4 +225,14 @@ public class Urna_eletronica {
             nomeEleitor.setEnabled(false);
         }
     }
+    
+    public void GuardarCandidato(int contOrdem, JLabel labNome,String votoSen,String votoGov, String votoPres){
+        if(contOrdem == 1){
+            votoSen = labNome.getText();
+        }else if(contOrdem == 2){
+            votoGov = labNome.getText();
+        }else if(contOrdem == 3){
+            votoPres = labNome.getText();
+        }
+    }
 }

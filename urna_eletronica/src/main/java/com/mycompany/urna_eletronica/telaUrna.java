@@ -24,11 +24,10 @@ public class telaUrna extends javax.swing.JFrame {
     Urna_eletronica app = new Urna_eletronica();
     int contOrdem = 0;
     Fim fim = new Fim();
-
-    String nome = "";
-    String votoSen = "";
-    String votoGov = "";
-    String votoPres = "";
+    
+    String votoSen = "1";
+    String votoGov = "2";
+    String votoPres = "3";
     boolean validado;
 
     //como acessar os elementos de uma classe em uma lista
@@ -561,11 +560,14 @@ public class telaUrna extends javax.swing.JFrame {
 
         if (validado == true) {
             System.out.println("ELEITOR VALIDADO");
-
+            
             app.quantNum(contOrdem, num3);
 
-            //limpar
+            //Salvar e Limpar
             if (contOrdem >= 1) {
+                //salva votos
+                app.GuardarCandidato(contOrdem, labNome, this.votoSen, this.votoGov, this.votoPres);
+                //limpar votos
                 app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido, fotoCand);
             }
             //Fim dos votos
@@ -573,7 +575,8 @@ public class telaUrna extends javax.swing.JFrame {
             app.IniciarVotacao(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, bConfirmar, contOrdem);
 
             if (contOrdem == 4) {
-              
+                System.out.println(votoSen+"\n"+votoGov+"\n"+votoPres);
+                
                 contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, fotoCand);
                 cadastro.validado = false;
                 
