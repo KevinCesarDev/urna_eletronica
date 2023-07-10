@@ -17,14 +17,12 @@ import javax.swing.ImageIcon;
  * @author Suricato Furtivo
  */
 public class telaUrna extends javax.swing.JFrame {
-    
-    
 
     Votos cadastro = new Votos();
     Urna_eletronica app = new Urna_eletronica();
     int contOrdem = 0;
     Fim fim = new Fim();
-    
+
     String votoSen = "1";
     String votoGov = "2";
     String votoPres = "3";
@@ -554,19 +552,26 @@ public class telaUrna extends javax.swing.JFrame {
         //validação do eleitor no cadastro
         if (contOrdem == 0) {
             for (int i = 0; i < cadastro.getEleitor().size(); i++) {
-                validado=cadastro.ValidarEleitor(cadastro.getEleitor().get(i).titulo, nomeEleitor);
+                validado = cadastro.ValidarEleitor(cadastro.getEleitor().get(i).titulo, nomeEleitor);
             }
         }
 
         if (validado == true) {
-            System.out.println("ELEITOR VALIDADO");
-            
+            //System.out.println("ELEITOR VALIDADO");
+
             app.quantNum(contOrdem, num3);
+            if (contOrdem == 1) {
+                votoSen = app.GuardarCandidato(contOrdem, labNome);
+            } else if (contOrdem == 2) {
+                votoGov = app.GuardarCandidato(contOrdem, labNome);
+            } else if (contOrdem == 3) {
+                votoPres = app.GuardarCandidato(contOrdem, labNome);
+            }
 
             //Salvar e Limpar
             if (contOrdem >= 1) {
                 //salva votos
-                app.GuardarCandidato(contOrdem, labNome, votoSen, votoGov, votoPres);
+
                 //limpar votos
                 app.limpar(num1, num2, num3, labNome, nomeCanditato, labPartido, partido, fotoCand);
             }
@@ -577,22 +582,20 @@ public class telaUrna extends javax.swing.JFrame {
             if (contOrdem == 4) {
                 //teste
                 System.out.println(votoSen+"\n"+votoGov+"\n"+votoPres);
-                
+
                 contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, fotoCand);
                 cadastro.validado = false;
-                
-               
-                    
+
                 try {
                     //telaCandidato.add(fim);
-                    
+
                     // o Sleep não está funcionando com o jpainel fim, o programa está rodando apenas uma única vez desta maneira
                     Thread.sleep(3000);
                     fim.setVisible(true);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(telaUrna.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                
+
                 fim.setVisible(false);
                 //só vai abrir para um novo eleitor com esta linha abaixo e tirar o fim(true) e add fim
                 app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar, fotoCand);
@@ -618,8 +621,6 @@ public class telaUrna extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_num2ActionPerformed
 
-    
-    
     /**
      * @param args the command line arguments
      */

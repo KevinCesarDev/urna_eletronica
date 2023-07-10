@@ -18,6 +18,7 @@ public class Urna_eletronica {
     Senador candidatoSen = new Senador();
     Governador candidatoGov = new Governador();
     Presidente candidatoPres = new Presidente();
+    String voto="";
 
     public void digNum(JTextField num1, JTextField num2, JTextField num3, JButton botao, int contOrdem, JLabel labCargo) {
         if (contOrdem == 1) {
@@ -226,13 +227,9 @@ public class Urna_eletronica {
         }
     }
     
-    public void GuardarCandidato(int contOrdem, JLabel labNome,String votoSen,String votoGov, String votoPres){
-        if(contOrdem == 1){
-            votoSen = labNome.getText();
-        }else if(contOrdem == 2){
-            votoGov = labNome.getText();
-        }else if(contOrdem == 3){
-            votoPres = labNome.getText();
-        }
+    public String GuardarCandidato(int contOrdem, JLabel labNome){
+            voto = labNome.getText();
+            return voto;
     }
+    
 }
