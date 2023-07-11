@@ -575,6 +575,9 @@ public class telaUrna extends javax.swing.JFrame {
         }
 
         if (validado == true) {
+            if(num1.getText().equals("") && contOrdem > 0){
+                validConf = false;
+            }
             if(validConf == true){
             //validar o botão confirmar somente após a digitação dos números dos candidatos 
             //System.out.println("ELEITOR VALIDADO");
