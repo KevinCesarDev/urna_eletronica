@@ -28,7 +28,7 @@ public class telaUrna extends javax.swing.JFrame {
     String Gov = "";
     String Pres = "";
     boolean validado;
-    boolean validConf=true;
+    boolean validConf = true;
 
     //como acessar os elementos de uma classe em uma lista
     //(cadastro.getEleitor().get(0).nome)
@@ -82,7 +82,7 @@ public class telaUrna extends javax.swing.JFrame {
         B7 = new javax.swing.JButton();
         B8 = new javax.swing.JButton();
         B9 = new javax.swing.JButton();
-        B10 = new javax.swing.JButton();
+        B0 = new javax.swing.JButton();
         bCorrigir = new javax.swing.JButton();
         bConfirmar = new javax.swing.JButton();
         bBranco = new javax.swing.JButton();
@@ -224,16 +224,16 @@ public class telaUrna extends javax.swing.JFrame {
             }
         });
 
-        B10.setBackground(new java.awt.Color(0, 0, 0));
-        B10.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        B10.setForeground(new java.awt.Color(255, 255, 255));
-        B10.setText("0");
-        B10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(153, 153, 153), new java.awt.Color(153, 153, 153)));
-        B10.setBorderPainted(false);
-        B10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        B10.addActionListener(new java.awt.event.ActionListener() {
+        B0.setBackground(new java.awt.Color(0, 0, 0));
+        B0.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        B0.setForeground(new java.awt.Color(255, 255, 255));
+        B0.setText("0");
+        B0.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(153, 153, 153), new java.awt.Color(153, 153, 153)));
+        B0.setBorderPainted(false);
+        B0.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        B0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B10ActionPerformed(evt);
+                B0ActionPerformed(evt);
             }
         });
 
@@ -430,7 +430,7 @@ public class telaUrna extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(B7, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(16, 16, 16)
-                                .addComponent(B10, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(B0, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(96, 96, 96)
                                 .addComponent(B8, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -475,7 +475,7 @@ public class telaUrna extends javax.swing.JFrame {
                             .addComponent(B8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(B9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(B10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(B0, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(telaCandidato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -492,7 +492,7 @@ public class telaUrna extends javax.swing.JFrame {
 
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
         // TODO add your handling code
-        app.digNum(num1, num2, num3, B1, contOrdem, labCargo, nomeEleitor,labNome);
+        app.digNum(num1, num2, num3, B1, contOrdem, labCargo, nomeEleitor, labNome);
         validConf = app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
 
     }//GEN-LAST:event_B1ActionPerformed
@@ -505,44 +505,51 @@ public class telaUrna extends javax.swing.JFrame {
 
     private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
         // TODO add your handling code here:
-        app.digNum(num1, num2, num3, B3, contOrdem, labCargo, nomeEleitor,labNome);
+        app.digNum(num1, num2, num3, B3, contOrdem, labCargo, nomeEleitor, labNome);
         validConf = app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
     }//GEN-LAST:event_B3ActionPerformed
 
     private void B4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B4ActionPerformed
         // TODO add your handling code here:
-
+        app.digNum(num1, num2, num3, B4, contOrdem, labCargo, nomeEleitor, labNome);
+        validConf = app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
     }//GEN-LAST:event_B4ActionPerformed
 
     private void B5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B5ActionPerformed
         // TODO add your handling code here:
-
+        app.digNum(num1, num2, num3, B5, contOrdem, labCargo, nomeEleitor, labNome);
+        validConf = app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
     }//GEN-LAST:event_B5ActionPerformed
 
     private void B6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B6ActionPerformed
         // TODO add your handling code here:
-
+        app.digNum(num1, num2, num3, B6, contOrdem, labCargo, nomeEleitor, labNome);
+        validConf = app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
     }//GEN-LAST:event_B6ActionPerformed
 
     private void B7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B7ActionPerformed
         // TODO add your handling code here:
-
+        app.digNum(num1, num2, num3, B7, contOrdem, labCargo, nomeEleitor, labNome);
+        validConf = app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
     }//GEN-LAST:event_B7ActionPerformed
 
     private void B8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B8ActionPerformed
         // TODO add your handling code here:
-
+        app.digNum(num1, num2, num3, B8, contOrdem, labCargo, nomeEleitor, labNome);
+        validConf = app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
     }//GEN-LAST:event_B8ActionPerformed
 
     private void B9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B9ActionPerformed
         // TODO add your handling code here:
-
+        app.digNum(num1, num2, num3, B9, contOrdem, labCargo, nomeEleitor, labNome);
+        validConf = app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
     }//GEN-LAST:event_B9ActionPerformed
 
-    private void B10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B10ActionPerformed
+    private void B0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B0ActionPerformed
         // TODO add your handling code here:
-
-    }//GEN-LAST:event_B10ActionPerformed
+        app.digNum(num1, num2, num3, B0, contOrdem, labCargo, nomeEleitor, labNome);
+        validConf = app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
+    }//GEN-LAST:event_B0ActionPerformed
 
     private void bBrancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBrancoActionPerformed
         // TODO add your handling code here:
@@ -564,43 +571,45 @@ public class telaUrna extends javax.swing.JFrame {
 
     private void bConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bConfirmarActionPerformed
         // TODO add your handling code here:
-       
+
         //validação do eleitor no cadastro
         if (contOrdem == 0) {
-            
+
             for (int i = 0; i < cadastro.getEleitor().size(); i++) {
                 validado = cadastro.ValidarEleitor(cadastro.getEleitor().get(i).getTitulo(), nomeEleitor);
-                
+
             }
         }
 
         if (validado == true) {
-            if(num1.getText().equals("") && contOrdem > 0){
+            if (labNome.getText().equals("VOTO BRANCO")) {
+                validConf = true;
+            } else if (num1.getText().equals("") && contOrdem > 0) {
                 validConf = false;
             }
-            if(validConf == true){
-            //validar o botão confirmar somente após a digitação dos números dos candidatos 
-            //System.out.println("ELEITOR VALIDADO");
-            app.quantNum(contOrdem, num3);
-            if (contOrdem == 1) {
-                Sen = app.GuardarCandidato(contOrdem, labNome);
-            } else if (contOrdem == 2) {
-                Gov = app.GuardarCandidato(contOrdem, labNome);
-            } else if (contOrdem == 3) {
-                Pres = app.GuardarCandidato(contOrdem, labNome);
-            }
+            if (validConf == true) {
+                //validar o botão confirmar somente após a digitação dos números dos candidatos 
+                //System.out.println("ELEITOR VALIDADO");
+                app.quantNum(contOrdem, num3);
+                if (contOrdem == 1) {
+                    Sen = app.GuardarCandidato(contOrdem, labNome);
+                } else if (contOrdem == 2) {
+                    Gov = app.GuardarCandidato(contOrdem, labNome);
+                } else if (contOrdem == 3) {
+                    Pres = app.GuardarCandidato(contOrdem, labNome);
+                }
 
-            //Salvar e Limpar
-            if (contOrdem >= 1) {
-                //salva votos
+                //Salvar e Limpar
+                if (contOrdem >= 1) {
+                    //salva votos
 
-                //limpar votos
-                app.limpar(numero, num1, num2, num3, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto);
-            }
-            //Fim dos votos
-            contOrdem++;
+                    //limpar votos
+                    app.limpar(numero, num1, num2, num3, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto);
+                }
+                //Fim dos votos
+                contOrdem++;
 
-            app.IniciarVotacao(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, bConfirmar, contOrdem);
+                app.IniciarVotacao(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, bConfirmar, contOrdem);
             }
             if (contOrdem == 4) {
                 for (int i = 0; i < cadastro.getEleitor().size(); i++) {
@@ -633,10 +642,10 @@ public class telaUrna extends javax.swing.JFrame {
 
             //exibir cargo do candidato
             app.TelaCargo(labCargo, contOrdem);
-        } else if(!(nomeEleitor.getText().equals("relatorio") || nomeEleitor.getText().equals("RELATORIO"))){
+        } else if (!(nomeEleitor.getText().equals("relatorio") || nomeEleitor.getText().equals("RELATORIO"))) {
             System.out.println("NÃO VALIDADO");
         }
-        
+
         //impressão dos votos
         if (nomeEleitor.getText().equals("relatorio") || nomeEleitor.getText().equals("RELATORIO")) {
             for (int i = 0; i < cadastro.getEleitor().size(); i++) {
@@ -708,8 +717,8 @@ public class telaUrna extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton B0;
     private javax.swing.JButton B1;
-    private javax.swing.JButton B10;
     private javax.swing.JButton B2;
     private javax.swing.JButton B3;
     private javax.swing.JButton B4;

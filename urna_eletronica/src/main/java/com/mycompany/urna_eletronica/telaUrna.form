@@ -51,7 +51,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="B7" min="-2" pref="80" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                              <Component id="B10" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="B0" min="-2" pref="80" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
@@ -110,7 +110,7 @@
                           <Component id="B9" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="B10" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="B0" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <Component id="telaCandidato" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -372,7 +372,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B9ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="B10">
+    <Component class="javax.swing.JButton" name="B0">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
@@ -396,7 +396,7 @@
         <Property name="horizontalAlignment" type="int" value="2"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B10ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B0ActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bCorrigir">
