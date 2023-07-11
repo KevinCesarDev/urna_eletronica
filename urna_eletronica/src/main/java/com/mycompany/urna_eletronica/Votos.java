@@ -41,4 +41,5 @@ public class Votos {
     public void setEleitor(List<Eleitor> eleitor) {
         this.eleitor = eleitor;
     }
+    
 }
