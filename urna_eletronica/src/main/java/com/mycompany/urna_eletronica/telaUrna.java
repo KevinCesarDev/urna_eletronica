@@ -22,7 +22,6 @@ public class telaUrna extends javax.swing.JFrame {
     Urna_eletronica app = new Urna_eletronica();
     int contOrdem = 0;
     int contEx = 1;
-    Fim fim = new Fim();
 
     String Sen = "";
     String Gov = "";
@@ -57,8 +56,6 @@ public class telaUrna extends javax.swing.JFrame {
         listaDeEleitores.add(eleitor6);
 
         cadastro.setEleitor(listaDeEleitores);
-        fim.setSize(520, 340);
-        fim.setLocation(0, 0);
 
     }
 
@@ -620,22 +617,20 @@ public class telaUrna extends javax.swing.JFrame {
                     }
 
                 }
-
+                //FINAL SEM SLEEP
                 contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, fotoCand);
+
                 cadastro.validado = false;
                 contEx++;
 
-                try {
-                    //telaCandidato.add(fim);
-
-                    // o Sleep não está funcionando com o jpainel fim, o programa está rodando apenas uma única vez desta maneira
-                    Thread.sleep(3000);
-                    fim.setVisible(true);
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(telaUrna.class.getName()).log(Level.SEVERE, null, ex);
-                }
-
-                fim.setVisible(false);
+//                try {
+//
+//                    // o Sleep não está funcionando com o jpainel fim, o programa está rodando apenas uma única vez desta maneira
+//                    Thread.sleep(3000);
+//                    contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, fotoCand);
+//                } catch (InterruptedException ex) {
+//                    Logger.getLogger(telaUrna.class.getName()).log(Level.SEVERE, null, ex);
+//                }
                 //só vai abrir para um novo eleitor com esta linha abaixo e tirar o fim(true) e add fim
                 app.Iniciar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, bConfirmar, fotoCand);
             }

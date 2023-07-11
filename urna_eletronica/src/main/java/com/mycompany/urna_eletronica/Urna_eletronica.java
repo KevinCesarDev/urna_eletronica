@@ -73,12 +73,12 @@ public class Urna_eletronica {
     }
 
     public boolean exibirCadidato(JTextField num1, JTextField num2, JTextField num3, int contOrdem, JLabel labNome, JLabel nomeCandidato, JLabel labPartido, JLabel partido, JLabel fotoCand, JTextArea instrucVoto, JLabel numero) {
-        
+
         numero.setVisible(false);
         nomeCandidato.setVisible(false);
         partido.setVisible(false);
         validarConfirmar = false;
-        
+
         if (contOrdem == 1) {
             instrucVoto.setText("Aperte a Tecla: \n    CONFIRMAR para CONFIRMAR este voto\n    CORRIGE para REINICIAR este voto");
             numCandidato = (num1.getText()) + (num2.getText()) + (num3.getText());
@@ -130,7 +130,7 @@ public class Urna_eletronica {
                     numero.setVisible(true);
                     nomeCandidato.setVisible(true);
                     partido.setVisible(true);
-                    validarConfirmar=true;
+                    validarConfirmar = true;
                     break;
                 default:
                     if (!(num2.getText().equals(""))) {
@@ -140,7 +140,7 @@ public class Urna_eletronica {
                         partido.setVisible(false);
                         labNome.setText("VOTO NULO");
                         labPartido.setText("");
-                        validarConfirmar=true;
+                        validarConfirmar = true;
                     }
             }
         } else if (contOrdem == 3) {
@@ -153,7 +153,7 @@ public class Urna_eletronica {
                     numero.setVisible(true);
                     nomeCandidato.setVisible(true);
                     partido.setVisible(true);
-                    validarConfirmar=true;
+                    validarConfirmar = true;
                     break;
                 case "13":
                     candidatoPres.lula(labNome, labPartido, fotoCand);
@@ -161,7 +161,7 @@ public class Urna_eletronica {
                     numero.setVisible(true);
                     nomeCandidato.setVisible(true);
                     partido.setVisible(true);
-                    validarConfirmar=true;
+                    validarConfirmar = true;
                     break;
                 case "22":
                     candidatoPres.jair(labNome, labPartido, fotoCand);
@@ -169,7 +169,7 @@ public class Urna_eletronica {
                     numero.setVisible(true);
                     nomeCandidato.setVisible(true);
                     partido.setVisible(true);
-                    validarConfirmar=true;
+                    validarConfirmar = true;
                     break;
                 default:
                     if (!(num2.getText().equals(""))) {
@@ -179,15 +179,15 @@ public class Urna_eletronica {
                         partido.setVisible(false);
                         labNome.setText("VOTO NULO");
                         labPartido.setText("");
-                        validarConfirmar=true;
+                        validarConfirmar = true;
                     }
             }
 
         }
         ImageIcon foto = new ImageIcon(new ImageIcon("C:/Users/Suricato Furtivo/Documents/urna_eletronica/urna_eletronica/src/main/java/imagens/" + labNome.getText() + ".jpg").getImage().getScaledInstance(200, 220, Image.SCALE_DEFAULT));
         fotoCand.setIcon(foto);
-        
-        if(contOrdem == 0){
+
+        if (contOrdem == 0) {
             validarConfirmar = true;
         }
         return validarConfirmar;
@@ -241,11 +241,14 @@ public class Urna_eletronica {
         num1.setText("");
         num2.setText("");
         num3.setText("");
-        labNome.setText("");
+
         labPartido.setText("");
         nomeEleitor.setText("");
         labCargo.setText("");
         fotoCand.removeAll();
+
+        //labNome.setText("FIM");
+        
 
         return 0;
     }
@@ -322,5 +325,4 @@ public class Urna_eletronica {
 
         }
     }
-
 }
