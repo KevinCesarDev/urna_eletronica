@@ -628,8 +628,7 @@ public class telaUrna extends javax.swing.JFrame {
 
             //exibir cargo do candidato
             app.TelaCargo(labCargo, contOrdem);
-        } else {
-
+        } else if(!(nomeEleitor.getText().equals("relatorio") || nomeEleitor.getText().equals("RELATORIO"))){
             System.out.println("NÃO VALIDADO");
         }
         
