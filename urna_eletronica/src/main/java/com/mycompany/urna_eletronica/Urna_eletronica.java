@@ -73,15 +73,14 @@ public class Urna_eletronica {
     }
 
     public boolean exibirCadidato(JTextField num1, JTextField num2, JTextField num3, int contOrdem, JLabel labNome, JLabel nomeCandidato, JLabel labPartido, JLabel partido, JLabel fotoCand, JTextArea instrucVoto, JLabel numero) {
-        instrucVoto.setVisible(false);
+        
         numero.setVisible(false);
         nomeCandidato.setVisible(false);
         partido.setVisible(false);
         validarConfirmar = false;
         
-        instrucVoto.setText("Aperte a Tecla: \n    CONFIRMAR para CONFIRMAR este voto\n    CORRIGE para REINICIAR este voto");
-        
         if (contOrdem == 1) {
+            instrucVoto.setText("Aperte a Tecla: \n    CONFIRMAR para CONFIRMAR este voto\n    CORRIGE para REINICIAR este voto");
             numCandidato = (num1.getText()) + (num2.getText()) + (num3.getText());
 
             switch (numCandidato) {
@@ -191,7 +190,6 @@ public class Urna_eletronica {
         if(contOrdem == 0){
             validarConfirmar = true;
         }
-        System.out.println(validarConfirmar);
         return validarConfirmar;
     }
 
