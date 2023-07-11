@@ -20,14 +20,14 @@ public class Urna_eletronica {
     Presidente candidatoPres = new Presidente();
     String voto = "";
 
-    public void digNum(JTextField num1, JTextField num2, JTextField num3, JButton botao, int contOrdem, JLabel labCargo, JTextField nomeEleitor) {
+    public void digNum(JTextField num1, JTextField num2, JTextField num3, JButton botao, int contOrdem, JLabel labCargo, JTextField nomeEleitor, JLabel labNome) {
         if (contOrdem == 0) {
             if (nomeEleitor.getText().equals("")) {
                 nomeEleitor.setText(botao.getText());
             } else {
                 nomeEleitor.setText(nomeEleitor.getText() + botao.getText());
             }
-        } else if (contOrdem == 1) {
+        } else if (contOrdem == 1 && (!(labNome.getText().equals("VOTO BRANCO")))) {
             //labCargo.setText("Senador");
 
             if (num1.getText().equals("")) {
@@ -37,14 +37,14 @@ public class Urna_eletronica {
             } else if (num3.getText().equals("")) {
                 num3.setText(botao.getText());
             }
-        } else if (contOrdem == 2) {
+        } else if (contOrdem == 2 && (!(labNome.getText().equals("VOTO BRANCO")))) {
             //labCargo.setText("Governador");
             if (num1.getText().equals("")) {
                 num1.setText(botao.getText());
             } else if (num2.getText().equals("")) {
                 num2.setText(botao.getText());
             }
-        } else if (contOrdem == 3) {
+        } else if (contOrdem == 3 && (!(labNome.getText().equals("VOTO BRANCO")))) {
             //labCargo.setText("Presidente");
             if (num1.getText().equals("")) {
                 num1.setText(botao.getText());
@@ -196,13 +196,15 @@ public class Urna_eletronica {
         nomeCandidato.setText("Nome:");
 
         numero.setVisible(false);
-        num1.setVisible(true);
-        num2.setVisible(true);
-        num3.setVisible(true);
         nomeCandidato.setVisible(false);
         partido.setVisible(false);
         labPartido.setVisible(true);
         instrucVoto.setVisible(false);
+        
+        num1.setVisible(true);
+        num2.setVisible(true);
+        num3.setVisible(true);
+
     }
 
     public int finalizar(JLabel labSeuVoto, JLabel labCargo, JLabel numero, JLabel nomeCandidato, JLabel partido, JTextArea instrucVoto, JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido, JTextField nomeEleitor, JLabel labEleitor, JLabel fotoCand) {
@@ -278,6 +280,7 @@ public class Urna_eletronica {
             labPartido.setVisible(true);
 
             nomeEleitor.setEnabled(false);
+
         }
     }
 
@@ -289,13 +292,13 @@ public class Urna_eletronica {
     public void VotoBranco(JLabel numero, JTextField num1, JTextField num2, JTextField num3, int contOrdem, JLabel labNome, JLabel nomeCandidato, JLabel labPartido, JLabel partido, JLabel fotoCand, JTextArea instrucVoto) {
         if (contOrdem > 0) {
             numero.setVisible(false);
-            num1.setVisible(false);
-            num2.setVisible(false);
-            num3.setVisible(false);
             labPartido.setVisible(false);
             partido.setVisible(false);
             fotoCand.setVisible(false);
             instrucVoto.setVisible(true);
+            num1.setVisible(false);
+            num2.setVisible(false);
+            num3.setVisible(false);
 
             labNome.setText("VOTO BRANCO");
             instrucVoto.setText("Aperte a Tecla: \n    CONFIRMAR para CONFIRMAR este voto\n    CORRIGE para REINICIAR este voto");

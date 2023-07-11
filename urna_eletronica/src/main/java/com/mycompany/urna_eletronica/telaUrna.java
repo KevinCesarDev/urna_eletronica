@@ -491,20 +491,20 @@ public class telaUrna extends javax.swing.JFrame {
 
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
         // TODO add your handling code
-        app.digNum(num1, num2, num3, B1, contOrdem, labCargo, nomeEleitor);
+        app.digNum(num1, num2, num3, B1, contOrdem, labCargo, nomeEleitor,labNome);
         app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
 
     }//GEN-LAST:event_B1ActionPerformed
 
     private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
         // TODO add your handling code here:
-        app.digNum(num1, num2, num3, B2, contOrdem, labCargo, nomeEleitor);
+        app.digNum(num1, num2, num3, B2, contOrdem, labCargo, nomeEleitor, labNome);
         app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
     }//GEN-LAST:event_B2ActionPerformed
 
     private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
         // TODO add your handling code here:
-        app.digNum(num1, num2, num3, B3, contOrdem, labCargo, nomeEleitor);
+        app.digNum(num1, num2, num3, B3, contOrdem, labCargo, nomeEleitor,labNome);
         app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
     }//GEN-LAST:event_B3ActionPerformed
 
@@ -545,6 +545,7 @@ public class telaUrna extends javax.swing.JFrame {
 
     private void bBrancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBrancoActionPerformed
         // TODO add your handling code here:
+        app.limpar(numero, num1, num2, num3, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto);
         app.VotoBranco(numero, num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto);
     }//GEN-LAST:event_bBrancoActionPerformed
 
