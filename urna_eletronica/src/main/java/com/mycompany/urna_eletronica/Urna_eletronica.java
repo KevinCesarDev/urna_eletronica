@@ -22,10 +22,10 @@ public class Urna_eletronica {
 
     public void digNum(JTextField num1, JTextField num2, JTextField num3, JButton botao, int contOrdem, JLabel labCargo, JTextField nomeEleitor) {
         if (contOrdem == 0) {
-            if(nomeEleitor.getText().equals("")){
+            if (nomeEleitor.getText().equals("")) {
                 nomeEleitor.setText(botao.getText());
-            }else{
-                nomeEleitor.setText(nomeEleitor.getText()+botao.getText());
+            } else {
+                nomeEleitor.setText(nomeEleitor.getText() + botao.getText());
             }
         } else if (contOrdem == 1) {
             //labCargo.setText("Senador");
@@ -71,20 +71,36 @@ public class Urna_eletronica {
         }
     }
 
-    public void exibirCadidato(JTextField num1, JTextField num2, JTextField num3, int contOrdem, JLabel labNome, JLabel nomeCandidato, JLabel labPartido, JLabel partido, JLabel fotoCand) {
+    public void exibirCadidato(JTextField num1, JTextField num2, JTextField num3, int contOrdem, JLabel labNome, JLabel nomeCandidato, JLabel labPartido, JLabel partido, JLabel fotoCand, JTextArea instrucVoto, JLabel numero) {
+        instrucVoto.setVisible(false);
+        numero.setVisible(false);
+        nomeCandidato.setVisible(false);
+        partido.setVisible(false);
+        instrucVoto.setText("Aperte a Tecla: \n    CONFIRMAR para CONFIRMAR este voto\n    CORRIGE para REINICIAR este voto");
+
         if (contOrdem == 1) {
             numCandidato = (num1.getText()) + (num2.getText()) + (num3.getText());
 
             switch (numCandidato) {
                 case "111":
                     candidatoSen.caca(labNome, labPartido, fotoCand);
+                    instrucVoto.setVisible(true);
+                    numero.setVisible(true);
+                    nomeCandidato.setVisible(true);
+                    partido.setVisible(true);
                     break;
                 case "333":
                     candidatoSen.otto(labNome, labPartido, fotoCand);
+                    instrucVoto.setVisible(true);
+                    numero.setVisible(true);
+                    nomeCandidato.setVisible(true);
+                    partido.setVisible(true);
                     break;
                 default:
                     if (!(num3.getText().equals(""))) {
-                        nomeCandidato.setVisible(false);
+                        instrucVoto.setVisible(true);
+                        nomeCandidato.setVisible(true);
+                        nomeCandidato.setText("NÚMERO ERRADO:");
                         partido.setVisible(false);
                         labNome.setText("VOTO NULO");
                         labPartido.setText("");
@@ -96,13 +112,24 @@ public class Urna_eletronica {
             switch (numCandidato) {
                 case "13":
                     candidatoGov.jeronimo(labNome, labPartido, fotoCand);
+                    instrucVoto.setVisible(true);
+                    numero.setVisible(true);
+                    nomeCandidato.setVisible(true);
+                    partido.setVisible(true);
+
                     break;
                 case "44":
                     candidatoGov.netinho(labNome, labPartido, fotoCand);
+                    instrucVoto.setVisible(true);
+                    numero.setVisible(true);
+                    nomeCandidato.setVisible(true);
+                    partido.setVisible(true);
                     break;
                 default:
                     if (!(num2.getText().equals(""))) {
-                        nomeCandidato.setVisible(false);
+                        instrucVoto.setVisible(true);
+                        nomeCandidato.setVisible(true);
+                        nomeCandidato.setText("NÚMERO ERRADO:");
                         partido.setVisible(false);
                         labNome.setText("VOTO NULO");
                         labPartido.setText("");
@@ -114,18 +141,31 @@ public class Urna_eletronica {
             switch (numCandidato) {
                 case "12":
                     candidatoPres.ciro(labNome, labPartido, fotoCand);
+                    instrucVoto.setVisible(true);
+                    numero.setVisible(true);
+                    nomeCandidato.setVisible(true);
+                    partido.setVisible(true);
                     break;
                 case "13":
                     candidatoPres.lula(labNome, labPartido, fotoCand);
+                    instrucVoto.setVisible(true);
+                    numero.setVisible(true);
+                    nomeCandidato.setVisible(true);
+                    partido.setVisible(true);
                     break;
                 case "22":
                     candidatoPres.jair(labNome, labPartido, fotoCand);
+                    instrucVoto.setVisible(true);
+                    numero.setVisible(true);
+                    nomeCandidato.setVisible(true);
+                    partido.setVisible(true);
                     break;
                 default:
                     if (!(num2.getText().equals(""))) {
-                        nomeCandidato.setVisible(false);
+                        instrucVoto.setVisible(true);
+                        nomeCandidato.setVisible(true);
+                        nomeCandidato.setText("NÚMERO ERRADO:");
                         partido.setVisible(false);
-
                         labNome.setText("VOTO NULO");
                         labPartido.setText("");
                     }
@@ -144,7 +184,7 @@ public class Urna_eletronica {
         }
     }
 
-    public void limpar(JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel nomeCandidato, JLabel labPartido, JLabel partido, JLabel fotoCand) {
+    public void limpar(JLabel numero, JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel nomeCandidato, JLabel labPartido, JLabel partido, JLabel fotoCand, JTextArea instrucVoto) {
         fotoCand.setVisible(false);
         fotoCand.removeAll();
 
@@ -153,16 +193,23 @@ public class Urna_eletronica {
         num3.setText("");
         labNome.setText("");
         labPartido.setText("");
+        nomeCandidato.setText("Nome:");
 
-        nomeCandidato.setVisible(true);
-        partido.setVisible(true);
+        numero.setVisible(false);
+        num1.setVisible(true);
+        num2.setVisible(true);
+        num3.setVisible(true);
+        nomeCandidato.setVisible(false);
+        partido.setVisible(false);
+        labPartido.setVisible(true);
+        instrucVoto.setVisible(false);
     }
 
-    public int finalizar(JLabel labSeuVoto, JLabel labCargo, JLabel numero, JLabel nomeCanditato, JLabel partido, JTextArea instrucVoto, JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido, JTextField nomeEleitor, JLabel labEleitor, JLabel fotoCand) {
+    public int finalizar(JLabel labSeuVoto, JLabel labCargo, JLabel numero, JLabel nomeCandidato, JLabel partido, JTextArea instrucVoto, JTextField num1, JTextField num2, JTextField num3, JLabel labNome, JLabel labPartido, JTextField nomeEleitor, JLabel labEleitor, JLabel fotoCand) {
         labSeuVoto.setVisible(false);
         labCargo.setVisible(false);
         numero.setVisible(false);
-        nomeCanditato.setVisible(false);
+        nomeCandidato.setVisible(false);
         partido.setVisible(false);
         instrucVoto.setVisible(false);
         num1.setVisible(false);
@@ -220,10 +267,10 @@ public class Urna_eletronica {
         if (contOrdem == 1) {
             labSeuVoto.setVisible(true);
             labCargo.setVisible(true);
-            numero.setVisible(true);
-            nomeCanditato.setVisible(true);
-            partido.setVisible(true);
-            instrucVoto.setVisible(true);
+            numero.setVisible(false);
+            nomeCanditato.setVisible(false);
+            partido.setVisible(false);
+            instrucVoto.setVisible(false);
             num1.setVisible(true);
             num2.setVisible(true);
             num3.setVisible(true);
@@ -237,6 +284,23 @@ public class Urna_eletronica {
     public String GuardarCandidato(int contOrdem, JLabel labNome) {
         voto = labNome.getText();
         return voto;
+    }
+
+    public void VotoBranco(JLabel numero, JTextField num1, JTextField num2, JTextField num3, int contOrdem, JLabel labNome, JLabel nomeCandidato, JLabel labPartido, JLabel partido, JLabel fotoCand, JTextArea instrucVoto) {
+        if (contOrdem > 0) {
+            numero.setVisible(false);
+            num1.setVisible(false);
+            num2.setVisible(false);
+            num3.setVisible(false);
+            labPartido.setVisible(false);
+            partido.setVisible(false);
+            fotoCand.setVisible(false);
+            instrucVoto.setVisible(true);
+
+            labNome.setText("VOTO BRANCO");
+            instrucVoto.setText("Aperte a Tecla: \n    CONFIRMAR para CONFIRMAR este voto\n    CORRIGE para REINICIAR este voto");
+
+        }
     }
 
 }
