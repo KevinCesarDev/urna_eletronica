@@ -28,6 +28,7 @@ public class telaUrna extends javax.swing.JFrame {
     String Gov = "";
     String Pres = "";
     boolean validado;
+    boolean validConf=true;
 
     //como acessar os elementos de uma classe em uma lista
     //(cadastro.getEleitor().get(0).nome)
@@ -492,20 +493,20 @@ public class telaUrna extends javax.swing.JFrame {
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
         // TODO add your handling code
         app.digNum(num1, num2, num3, B1, contOrdem, labCargo, nomeEleitor,labNome);
-        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
+        validConf = app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
 
     }//GEN-LAST:event_B1ActionPerformed
 
     private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
         // TODO add your handling code here:
         app.digNum(num1, num2, num3, B2, contOrdem, labCargo, nomeEleitor, labNome);
-        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
+        validConf = app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
     }//GEN-LAST:event_B2ActionPerformed
 
     private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
         // TODO add your handling code here:
         app.digNum(num1, num2, num3, B3, contOrdem, labCargo, nomeEleitor,labNome);
-        app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
+        validConf = app.exibirCadidato(num1, num2, num3, contOrdem, labNome, nomeCanditato, labPartido, partido, fotoCand, instrucVoto, numero);
     }//GEN-LAST:event_B3ActionPerformed
 
     private void B4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B4ActionPerformed
@@ -574,7 +575,7 @@ public class telaUrna extends javax.swing.JFrame {
         }
 
         if (validado == true) {
-
+            if(validConf == true){
             //validar o botão confirmar somente após a digitação dos números dos candidatos 
             //System.out.println("ELEITOR VALIDADO");
             app.quantNum(contOrdem, num3);
@@ -597,7 +598,7 @@ public class telaUrna extends javax.swing.JFrame {
             contOrdem++;
 
             app.IniciarVotacao(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, bConfirmar, contOrdem);
-
+            }
             if (contOrdem == 4) {
                 for (int i = 0; i < cadastro.getEleitor().size(); i++) {
                     if ((nomeEleitor.getText()).equals(cadastro.getEleitor().get(i).getTitulo())) {
