@@ -45,7 +45,7 @@ public class telaUrna extends javax.swing.JFrame {
         Eleitor eleitor1 = new Eleitor("10", "Kevin", "-", "-", "-");
         Eleitor eleitor2 = new Eleitor("15", "Tiago", "-", "-", "-");
         Eleitor eleitor3 = new Eleitor("20", "Raphael", "-", "-", "-");
-        Eleitor eleitor4 = new Eleitor("25", "Berenguer", "-", "-", "-");
+        Eleitor eleitor4 = new Eleitor("24", "Berenguer", "-", "-", "-");
         Eleitor eleitor5 = new Eleitor("30", "Wyll", "-", "-", "-");
         Eleitor eleitor6 = new Eleitor("35", "Icaro", "-", "-", "-");
 
