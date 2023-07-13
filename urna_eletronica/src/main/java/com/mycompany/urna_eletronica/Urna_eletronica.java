@@ -184,7 +184,7 @@ public class Urna_eletronica {
             }
 
         }
-        Icon foto = new ImageIcon("src/main/java/imagens/" + labNome.getText() + ".jpg");
+        Icon foto = new ImageIcon(new ImageIcon("src/main/java/imagens/" + labNome.getText() + ".jpg").getImage().getScaledInstance(200, 220, Image.SCALE_DEFAULT));
         fotoCand.setIcon(foto);
 
         if (contOrdem == 0) {
