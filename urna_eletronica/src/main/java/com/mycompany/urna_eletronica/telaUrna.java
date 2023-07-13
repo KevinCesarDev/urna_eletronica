@@ -625,10 +625,6 @@ public class telaUrna extends javax.swing.JFrame {
             }
             System.out.println(contOrdem);
             if(contOrdem == 4){
-                app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, fotoCand);
-                labFim.setVisible(true);
-            }
-            if (contOrdem == 5) {
                 for (int i = 0; i < cadastro.getEleitor().size(); i++) {
                     if ((nomeEleitor.getText()).equals(cadastro.getEleitor().get(i).getTitulo())) {
                         cadastro.getEleitor().get(i).setVotoSen(Sen);
@@ -637,7 +633,12 @@ public class telaUrna extends javax.swing.JFrame {
                     }
 
                 }
-                //FINAL SEM SLEEP
+                app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, fotoCand);
+                labFim.setVisible(true);
+            }
+            if (contOrdem == 5) {
+                
+                //FINAL
                 contOrdem = app.finalizar(labSeuVoto, labCargo, numero, nomeCanditato, partido, instrucVoto, num1, num2, num3, labNome, labPartido, nomeEleitor, labEleitor, fotoCand);
 
                 cadastro.validado = false;
