@@ -8,8 +8,9 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author kevin
+ * @author IcaroEstrela
  */
+
 public class Presidente {
 
     public void lula(JLabel labNome, JLabel labPartido,JLabel fotoCand) {

@@ -14,7 +14,7 @@ import javax.swing.ImageIcon;
  */
 /**
  *
- * @author Suricato Furtivo
+ * @author Tiago Suricato_Furtivo
  */
 public class telaUrna extends javax.swing.JFrame {
 

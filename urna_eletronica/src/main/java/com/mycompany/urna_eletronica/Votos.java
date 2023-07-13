@@ -13,7 +13,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author kevin
+ * @author Wyll
  */
 public class Votos {
 

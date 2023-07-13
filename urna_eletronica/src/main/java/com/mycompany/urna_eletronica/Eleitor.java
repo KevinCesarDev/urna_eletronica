@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  *
- * @author kevin
+ * @author Raphael Condoriano
  */
 public class Eleitor {
     private String titulo;

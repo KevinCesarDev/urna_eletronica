@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author kevin
+ * @author IcaroEstrela
  */
 public class Senador{
     public void caca(JLabel labNome, JLabel labPartido,JLabel fotoCand) {

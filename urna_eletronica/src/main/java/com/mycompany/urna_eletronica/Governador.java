@@ -8,7 +8,7 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author kevin
+ * @author IcaroEstrela
  */
 public class Governador {
 
