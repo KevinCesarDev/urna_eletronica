@@ -184,7 +184,7 @@ public class Urna_eletronica {
             }
 
         }
-        ImageIcon foto = new ImageIcon(new ImageIcon("C:/Users/Suricato Furtivo/Documents/urna_eletronica/urna_eletronica/src/main/java/imagens/" + labNome.getText() + ".jpg").getImage().getScaledInstance(200, 220, Image.SCALE_DEFAULT));
+        Icon foto = new ImageIcon("src/main/java/imagens/" + labNome.getText() + ".jpg");
         fotoCand.setIcon(foto);
 
         if (contOrdem == 0) {
