@@ -92,7 +92,7 @@ public class Urna_eletronica {
                     partido.setVisible(true);
                     validarConfirmar = true;
                     break;
-                case "333":
+                case "555":
                     candidatoSen.otto(labNome, labPartido, fotoCand);
                     instrucVoto.setVisible(true);
                     numero.setVisible(true);
